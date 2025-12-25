@@ -699,11 +699,32 @@ body {
 /* Mobile Optimizations */
 @media (max-width: 768px) {
     .swiper-slide {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem 3rem; /* More top and bottom padding */
     }
 
     .card {
         max-width: 100%;
+        padding-top: 1rem; /* Extra top padding for cards */
+    }
+
+    /* Add more top margin for titles on mobile */
+    .swiper-slide-active .card-ranked-list .title,
+    .swiper-slide-active .card-big-highlight .title,
+    .swiper-slide-active .card-comparison .title {
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Extra spacing for intro cards */
+    .swiper-slide-active .card-intro .title {
+        margin-top: 1rem;
+    }
+
+    /* Add more bottom margin for pagination controls */
+    .pagination-controls {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
     }
 
     .ranked-items-viewport {
@@ -848,7 +869,7 @@ html {
     .back-to-top {
         width: 45px;
         height: 45px;
-        bottom: 1.5rem;
+        bottom: 2.5rem; /* More space from bottom on mobile */
         right: 1.5rem;
         font-size: 1.3rem;
     }

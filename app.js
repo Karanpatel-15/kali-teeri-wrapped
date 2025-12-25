@@ -269,10 +269,14 @@ class WrappedRenderer {
   updateBackToTopButton(currentIndex) {
     const backToTopBtn = document.getElementById("backToTop");
     if (backToTopBtn) {
-      if (currentIndex === 0) {
-        backToTopBtn.classList.remove("show");
-      } else {
+      // Only show on the last slide (final "Game Over" card)
+      const totalSlides = this.data.length;
+      const isLastSlide = currentIndex === totalSlides - 1;
+
+      if (isLastSlide) {
         backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
       }
     }
   }
