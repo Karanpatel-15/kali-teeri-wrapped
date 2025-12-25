@@ -12,7 +12,7 @@ class WrappedRenderer {
     this.renderCards();
     this.initSwiper();
     this.addScrollIndicator();
-    this.setupExpandButtons();
+    this.setupPagination();
     this.setupBackToTopButton();
     this.updateBackToTopButton(0);
   }
@@ -60,69 +60,90 @@ class WrappedRenderer {
         `;
   }
 
-  // Render ranked list card template
-  renderRankedListCard(card) {
-    const allItems = card.items;
-    const itemsPerPage = 5;
-    const totalPages = Math.ceil(allItems.length / itemsPerPage);
-    const cardId = `ranked-${Date.now()}-${Math.random()
-      .toString(36)
-      .substr(2, 9)}`;
-
-    // Create pages - each page is a container div
+  // Unified helper function to create paginated pages
+  createPaginatedPages(items, itemsPerPage, renderItemCallback) {
+    const totalPages = Math.ceil(items.length / itemsPerPage);
     let pagesHTML = "";
+
     for (let page = 0; page < totalPages; page++) {
-      const pageItems = allItems.slice(
+      const pageItems = items.slice(
         page * itemsPerPage,
         (page + 1) * itemsPerPage
       );
       const pageItemsHTML = pageItems
         .map((item, index) => {
-          const rank = page * itemsPerPage + index + 1;
-          return `
-            <div class="ranked-item" data-rank="${rank}">
-              <span class="rank">#${rank}</span>
-              <span class="label">${this.escapeHtml(item.label)}</span>
-              <span class="value">${this.escapeHtml(item.value)}</span>
-            </div>
-          `;
+          const globalIndex = page * itemsPerPage + index;
+          return renderItemCallback(item, globalIndex, index);
         })
         .join("");
 
       const isFirstPage = page === 0;
       pagesHTML += `
-        <div class="ranked-page" data-page="${page}" ${
-        isFirstPage ? 'data-active="true"' : 'data-active="false"'
-      }>
+        <div class="items-page ${
+          isFirstPage ? "active" : ""
+        }" data-page="${page}">
           ${pageItemsHTML}
         </div>
       `;
     }
 
-    const paginationControls =
-      totalPages > 1
-        ? `
-            <div class="pagination-controls" data-card-id="${cardId}">
-                <button class="pagination-button pagination-prev" data-card-id="${cardId}" data-direction="prev" style="display: none;" aria-label="Previous page">
-                    Prev
-                </button>
-                <span class="page-indicator" data-card-id="${cardId}">1 / ${totalPages}</span>
-                <button class="pagination-button pagination-next" data-card-id="${cardId}" data-direction="next" aria-label="Next page">
-                    Next
-                </button>
-            </div>
-        `
-        : "";
+    return { pagesHTML, totalPages };
+  }
+
+  // Create pagination controls HTML
+  createPaginationControls(cardId, totalPages) {
+    if (totalPages <= 1) return "";
 
     return `
-            <div class="card card-ranked-list" data-card-id="${cardId}" data-current-page="0" data-total-pages="${totalPages}">
-                <div class="title">${this.escapeHtml(card.title)}</div>
-                <div class="ranked-items-container">
-                    ${pagesHTML}
-                </div>
-                ${paginationControls}
-            </div>
-        `;
+      <div class="pagination-controls" data-card-id="${cardId}">
+        <button class="pagination-button pagination-prev" data-card-id="${cardId}" data-direction="prev" style="display: none;" aria-label="Previous page">
+          Prev
+        </button>
+        <span class="page-indicator" data-card-id="${cardId}">1 / ${totalPages}</span>
+        <button class="pagination-button pagination-next" data-card-id="${cardId}" data-direction="next" aria-label="Next page">
+          Next
+        </button>
+      </div>
+    `;
+  }
+
+  // Render ranked list card template
+  renderRankedListCard(card) {
+    const cardId = `ranked-${Date.now()}-${Math.random()
+      .toString(36)
+      .substr(2, 9)}`;
+
+    const renderItem = (item, globalIndex, pageIndex) => {
+      const rank = globalIndex + 1;
+      return `
+        <div class="ranked-item" data-rank="${rank}">
+          <span class="rank">#${rank}</span>
+          <span class="label">${this.escapeHtml(item.label)}</span>
+          <span class="value">${this.escapeHtml(item.value)}</span>
+        </div>
+      `;
+    };
+
+    const { pagesHTML, totalPages } = this.createPaginatedPages(
+      card.items,
+      5,
+      renderItem
+    );
+
+    const paginationControls = this.createPaginationControls(
+      cardId,
+      totalPages
+    );
+
+    return `
+      <div class="card card-ranked-list" data-card-id="${cardId}" data-current-page="0" data-total-pages="${totalPages}">
+        <div class="title">${this.escapeHtml(card.title)}</div>
+        <div class="items-viewport ranked-items-viewport">
+          ${pagesHTML}
+        </div>
+        ${paginationControls}
+      </div>
+    `;
   }
 
   // Render big highlight card template
@@ -141,23 +162,39 @@ class WrappedRenderer {
 
   // Render comparison card template
   renderComparisonCard(card) {
-    const itemsHTML = card.items
-      .map((item) => {
-        return `
-                <div class="comparison-item">
-                    <div class="label">${this.escapeHtml(item.label)}</div>
-                    <div class="value">${this.escapeHtml(item.value)}</div>
-                </div>
-            `;
-      })
-      .join("");
+    const cardId = `comparison-${Date.now()}-${Math.random()
+      .toString(36)
+      .substr(2, 9)}`;
+
+    const renderItem = (item, globalIndex, pageIndex) => {
+      return `
+        <div class="comparison-item">
+          <div class="label">${this.escapeHtml(item.label)}</div>
+          <div class="value">${this.escapeHtml(item.value)}</div>
+        </div>
+      `;
+    };
+
+    const { pagesHTML, totalPages } = this.createPaginatedPages(
+      card.items,
+      5,
+      renderItem
+    );
+
+    const paginationControls = this.createPaginationControls(
+      cardId,
+      totalPages
+    );
 
     return `
-            <div class="card card-comparison">
-                <div class="title">${this.escapeHtml(card.title)}</div>
-                <div class="comparison-items">${itemsHTML}</div>
-            </div>
-        `;
+      <div class="card card-comparison" data-card-id="${cardId}" data-current-page="0" data-total-pages="${totalPages}">
+        <div class="title">${this.escapeHtml(card.title)}</div>
+        <div class="items-viewport comparison-items-viewport">
+          ${pagesHTML}
+        </div>
+        ${paginationControls}
+      </div>
+    `;
   }
 
   // Initialize Swiper with vertical direction
@@ -230,76 +267,81 @@ class WrappedRenderer {
     }, 100);
   }
 
-  // Setup pagination button handlers
-  setupExpandButtons() {
+  // Unified pagination handler for both ranked and comparison cards
+  setupPagination() {
     document.addEventListener("click", (e) => {
       const button = e.target.closest(".pagination-button");
-      if (button) {
-        const cardId = button.getAttribute("data-card-id");
-        const direction = button.getAttribute("data-direction");
-        const card = document.querySelector(`[data-card-id="${cardId}"]`);
+      if (!button) return;
 
-        if (!card) return;
+      const cardId = button.getAttribute("data-card-id");
+      const direction = button.getAttribute("data-direction");
+      const card = document.querySelector(`[data-card-id="${cardId}"]`);
 
-        const currentPage =
-          parseInt(card.getAttribute("data-current-page")) || 0;
-        const totalPages = parseInt(card.getAttribute("data-total-pages")) || 1;
-        const prevButton = card.querySelector(".pagination-prev");
-        const nextButton = card.querySelector(".pagination-next");
-        const pageIndicator = card.querySelector(".page-indicator");
+      if (!card) return;
 
-        let newPage = currentPage;
+      const currentPage = parseInt(card.getAttribute("data-current-page")) || 0;
+      const totalPages = parseInt(card.getAttribute("data-total-pages")) || 1;
 
-        if (direction === "next" && currentPage < totalPages - 1) {
-          newPage = currentPage + 1;
-        } else if (direction === "prev" && currentPage > 0) {
-          newPage = currentPage - 1;
-        } else {
-          return; // Can't go further
-        }
-
-        // Get current and next page containers
-        const currentPageContainer = card.querySelector(
-          `.ranked-page[data-page="${currentPage}"]`
-        );
-        const nextPageContainer = card.querySelector(
-          `.ranked-page[data-page="${newPage}"]`
-        );
-
-        if (!currentPageContainer || !nextPageContainer) return;
-
-        // Fade out current page
-        currentPageContainer.setAttribute("data-active", "false");
-        currentPageContainer.classList.add("fade-out");
-
-        // After fade-out, switch pages
-        setTimeout(() => {
-          // Hide current page completely
-          currentPageContainer.style.display = "none";
-          currentPageContainer.classList.remove("fade-out");
-
-          // Show and fade in next page
-          nextPageContainer.style.display = "flex";
-          nextPageContainer.setAttribute("data-active", "true");
-          nextPageContainer.classList.add("fade-in");
-
-          // Update card state
-          card.setAttribute("data-current-page", newPage);
-
-          // Update buttons
-          if (prevButton) {
-            prevButton.style.display = newPage > 0 ? "block" : "none";
-          }
-          if (nextButton) {
-            nextButton.style.display =
-              newPage < totalPages - 1 ? "block" : "none";
-          }
-          if (pageIndicator) {
-            pageIndicator.textContent = `${newPage + 1} / ${totalPages}`;
-          }
-        }, 300); // Match CSS transition duration
+      // Validate direction
+      if (
+        (direction === "next" && currentPage >= totalPages - 1) ||
+        (direction === "prev" && currentPage <= 0)
+      ) {
+        return; // Can't go further
       }
+
+      const newPage = direction === "next" ? currentPage + 1 : currentPage - 1;
+
+      // Get all pages in the viewport
+      const viewport = card.querySelector(".items-viewport");
+      if (!viewport) return;
+
+      const currentPageContainer = viewport.querySelector(
+        `.items-page[data-page="${currentPage}"]`
+      );
+      const nextPageContainer = viewport.querySelector(
+        `.items-page[data-page="${newPage}"]`
+      );
+
+      if (!currentPageContainer || !nextPageContainer) return;
+
+      // Fade out current page
+      currentPageContainer.classList.remove("active");
+      currentPageContainer.classList.add("fade-out");
+
+      // After fade-out, switch pages
+      setTimeout(() => {
+        // Hide current page
+        currentPageContainer.classList.remove("fade-out");
+
+        // Show and fade in next page
+        nextPageContainer.classList.add("active", "fade-in");
+
+        // Update card state
+        card.setAttribute("data-current-page", newPage);
+
+        // Update buttons and indicator
+        this.updatePaginationControls(card, newPage, totalPages);
+      }, 300); // Match CSS transition duration
     });
+  }
+
+  // Update pagination control buttons and indicator
+  updatePaginationControls(card, currentPage, totalPages) {
+    const prevButton = card.querySelector(".pagination-prev");
+    const nextButton = card.querySelector(".pagination-next");
+    const pageIndicator = card.querySelector(".page-indicator");
+
+    if (prevButton) {
+      prevButton.style.display = currentPage > 0 ? "block" : "none";
+    }
+    if (nextButton) {
+      nextButton.style.display =
+        currentPage < totalPages - 1 ? "block" : "none";
+    }
+    if (pageIndicator) {
+      pageIndicator.textContent = `${currentPage + 1} / ${totalPages}`;
+    }
   }
 
   // Setup back to top button

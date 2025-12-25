@@ -193,61 +193,70 @@ body {
     animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
 }
 
-/* Ranked Items Container - Fixed Height */
-.ranked-items-container {
+/* Unified Items Viewport - Fixed Height Container */
+.items-viewport {
     position: relative;
-    height: 380px; /* Fixed height for exactly 5 items */
     margin-top: 2rem;
     overflow: hidden;
 }
 
-/* Page Container - Absolute positioning so pages overlap */
-.ranked-page {
+.ranked-items-viewport {
+    height: 380px; /* Fixed height for exactly 5 ranked items */
+}
+
+.comparison-items-viewport {
+    height: 420px; /* Fixed height for exactly 5 comparison items */
+}
+
+/* Unified Page Container - Absolute positioning so pages overlap */
+.items-page {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
+    z-index: 1;
 }
 
-.ranked-page[data-active="true"] {
-    display: flex;
+.items-page.active {
+    opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
     z-index: 2;
 }
 
-.ranked-page[data-active="false"] {
-    display: none;
-    z-index: 1;
-}
-
 /* Fade out animation */
-.ranked-page.fade-out {
+.items-page.fade-out {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateY(-10px);
 }
 
 /* Fade in animation */
-.ranked-page.fade-in {
-    opacity: 0;
+.items-page.fade-in {
     animation: fadeInPage 0.3s ease forwards;
 }
 
 @keyframes fadeInPage {
     from {
         opacity: 0;
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Ranked Item */
+/* Ranked Items Styles */
+.ranked-items-viewport .items-page {
+    gap: 0.8rem;
+}
+
 .ranked-item {
     display: flex;
     align-items: center;
@@ -262,16 +271,16 @@ body {
     height: auto;
 }
 
-/* Initial animation for first page items */
-.swiper-slide-active .ranked-page[data-page="0"][data-active="true"] .ranked-item {
+/* Initial animation for first page ranked items */
+.swiper-slide-active .ranked-items-viewport .items-page[data-page="0"].active .ranked-item {
     animation: slideInBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
-.swiper-slide-active .ranked-page[data-page="0"][data-active="true"] .ranked-item:nth-child(1) { animation-delay: 0.1s; }
-.swiper-slide-active .ranked-page[data-page="0"][data-active="true"] .ranked-item:nth-child(2) { animation-delay: 0.2s; }
-.swiper-slide-active .ranked-page[data-page="0"][data-active="true"] .ranked-item:nth-child(3) { animation-delay: 0.3s; }
-.swiper-slide-active .ranked-page[data-page="0"][data-active="true"] .ranked-item:nth-child(4) { animation-delay: 0.4s; }
-.swiper-slide-active .ranked-page[data-page="0"][data-active="true"] .ranked-item:nth-child(5) { animation-delay: 0.5s; }
+.swiper-slide-active .ranked-items-viewport .items-page[data-page="0"].active .ranked-item:nth-child(1) { animation-delay: 0.1s; }
+.swiper-slide-active .ranked-items-viewport .items-page[data-page="0"].active .ranked-item:nth-child(2) { animation-delay: 0.2s; }
+.swiper-slide-active .ranked-items-viewport .items-page[data-page="0"].active .ranked-item:nth-child(3) { animation-delay: 0.3s; }
+.swiper-slide-active .ranked-items-viewport .items-page[data-page="0"].active .ranked-item:nth-child(4) { animation-delay: 0.4s; }
+.swiper-slide-active .ranked-items-viewport .items-page[data-page="0"].active .ranked-item:nth-child(5) { animation-delay: 0.5s; }
 
 .ranked-item:hover {
     transform: translateY(-4px) scale(1.02);
@@ -400,28 +409,31 @@ body {
     animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
 }
 
-.comparison-items {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
+/* Comparison Items Styles */
+.comparison-items-viewport .items-page {
+    gap: 1.5rem;
 }
 
 .comparison-item {
-    padding: 2rem;
+    padding: 1.5rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    animation: none;
     transition: transform 0.3s ease;
-    opacity: 0;
-    transform: translateX(50px) scale(0.9);
+    flex-shrink: 0;
 }
 
-.swiper-slide-active .comparison-item {
+/* Initial animation for first page comparison items */
+.swiper-slide-active .comparison-items-viewport .items-page[data-page="0"].active .comparison-item {
     animation: slideInBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
+
+.swiper-slide-active .comparison-items-viewport .items-page[data-page="0"].active .comparison-item:nth-child(1) { animation-delay: 0.1s; }
+.swiper-slide-active .comparison-items-viewport .items-page[data-page="0"].active .comparison-item:nth-child(2) { animation-delay: 0.2s; }
+.swiper-slide-active .comparison-items-viewport .items-page[data-page="0"].active .comparison-item:nth-child(3) { animation-delay: 0.3s; }
+.swiper-slide-active .comparison-items-viewport .items-page[data-page="0"].active .comparison-item:nth-child(4) { animation-delay: 0.4s; }
+.swiper-slide-active .comparison-items-viewport .items-page[data-page="0"].active .comparison-item:nth-child(5) { animation-delay: 0.5s; }
 
 .comparison-item:hover {
     transform: scale(1.05) rotate(1deg);
@@ -580,17 +592,7 @@ body {
 }
 
 
-/* Stagger animation delays for ranked items */
-.swiper-slide-active .ranked-item:nth-child(1) { animation-delay: 0.3s; }
-.swiper-slide-active .ranked-item:nth-child(2) { animation-delay: 0.4s; }
-.swiper-slide-active .ranked-item:nth-child(3) { animation-delay: 0.5s; }
-.swiper-slide-active .ranked-item:nth-child(4) { animation-delay: 0.6s; }
-.swiper-slide-active .ranked-item:nth-child(5) { animation-delay: 0.7s; }
-.swiper-slide-active .ranked-item:nth-child(6) { animation-delay: 0.8s; }
 
-.swiper-slide-active .comparison-item:nth-child(1) { animation-delay: 0.3s; }
-.swiper-slide-active .comparison-item:nth-child(2) { animation-delay: 0.5s; }
-.swiper-slide-active .comparison-item:nth-child(3) { animation-delay: 0.7s; }
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
@@ -602,12 +604,20 @@ body {
         max-width: 100%;
     }
 
+    .ranked-items-viewport {
+        height: 350px;
+    }
+    
+    .comparison-items-viewport {
+        height: 380px;
+    }
+
     .ranked-item {
         padding: 1.2rem;
     }
 
     .comparison-item {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 }
 
@@ -735,4 +745,5 @@ html {
         font-size: 1.3rem;
     }
 }
+
 
