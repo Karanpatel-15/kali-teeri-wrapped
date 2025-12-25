@@ -1,199 +1,405 @@
 import json
 from collections import Counter, defaultdict
 
-def generate_frequent_player_wrapped(data):
+def calculate_stats(data):
+    """
+    Calculate all statistics for Kali Teeri Wrapped 2025.
+    Only processes players in frequentNames array, ignores "Guest" players.
+    """
     # Get the list of frequent players to filter by
     frequent_players = set(data.get('frequentNames', []))
     
-    # Tracking dictionaries
-    leads_count = Counter()
-    leads_wins = Counter()
-    leads_points = defaultdict(list)
-    
-    tm_count = Counter()
-    tm_wins = Counter()
-    
-    clutch_wins = Counter()
-    over_sellers = Counter()
-    
-    # Leader -> Teammate mapping (for wins and losses)
-    partnerships = defaultdict(Counter)
-    partnership_losses = defaultdict(Counter)
-    
-    # Overall win rate tracking
+    # Statistics tracking dictionaries
+    games_played = defaultdict(set)  # Track unique games each player participated in
     total_rounds = Counter()  # Total rounds participated (as leader or teammate)
     total_wins = Counter()    # Total wins (as leader or teammate)
     
-    # Traitor tracking (points lost as teammate)
-    tm_losses = Counter()     # Count of losses as teammate
-    tm_points_lost = Counter()  # Total points lost when teammate (sum of bid points on losses)
+    # Leader stats
+    leader_count = Counter()  # Total times bidding/leading
+    leader_wins = Counter()   # Total wins as leader
+    clutch_wins = Counter()   # Wins as leader with bid >= 200
     
-    # Games played tracking (unique games per player)
-    games_played = defaultdict(set)  # Track unique games each player participated in
+    # Teammate stats
+    teammate_count = Counter()  # Total times called as teammate
+    teammate_wins = Counter()   # Total wins as teammate
     
-    # Trio tracking
-    trios = Counter()
-
+    # Trio tracking (only for games with 8+ players)
+    trios = Counter()  # Key: sorted tuple of 3 names, Value: win count
+    
+    # Process all games and rounds
     for game_idx, game in enumerate(data.get('pastGames', [])):
+        game_players = set(game.get('players', []))
+        num_players = len(game_players)
+        
+        # Only process trios for games with 8 or more players
+        process_trios = num_players >= 8
+        
         for rd in game.get('rounds', []):
-            l = rd['leader']
-            tms = rd['teammates']
-            pts = rd['points']
+            leader = rd['leader']
+            teammates = rd['teammates']
+            points = rd['points']
             won = rd['result']
             
-            # --- FILTERING LOGIC ---
-            # We only record stats if the Leader is in our frequent list
-            is_frequent_leader = l in frequent_players
+            # Only process if leader is in frequentNames (ignore Guest players)
+            if leader not in frequent_players:
+                continue
             
-            if is_frequent_leader:
-                leads_count[l] += 1
-                leads_points[l].append(pts)
-                total_rounds[l] += 1
-                games_played[l].add(game_idx)  # Track this game for the leader
+            # Count as leader
+            leader_count[leader] += 1
+            total_rounds[leader] += 1
+            games_played[leader].add(game_idx)
+            
+            if won:
+                leader_wins[leader] += 1
+                total_wins[leader] += 1
+                
+                # Check for clutch win (bid >= 200)
+                if points >= 200:
+                    clutch_wins[leader] += 1
+            
+            # Process teammates (only if they're in frequentNames)
+            for tm in teammates:
+                if tm not in frequent_players:
+                    continue
+                
+                # Count as teammate
+                teammate_count[tm] += 1
+                total_rounds[tm] += 1
+                games_played[tm].add(game_idx)
+                
                 if won:
-                    leads_wins[l] += 1
-                    total_wins[l] += 1
-                    if pts >= 220:  # Changed to >=220 for "The Clutch" Factor
-                        clutch_wins[l] += 1
-                else:
-                    over_sellers[l] += 1
+                    teammate_wins[tm] += 1
+                    total_wins[tm] += 1
             
-            # Teammate Stats (only for frequent players)
-            for tm in tms:
-                if tm in frequent_players:
-                    tm_count[tm] += 1
-                    total_rounds[tm] += 1
-                    games_played[tm].add(game_idx)  # Track this game for the teammate
-                    if is_frequent_leader:
-                        partnerships[l][tm] += 1
-                        if not won:
-                            partnership_losses[l][tm] += 1
-                    if won:
-                        tm_wins[tm] += 1
-                        total_wins[tm] += 1
-                    else:
-                        tm_losses[tm] += 1
-                        tm_points_lost[tm] += pts  # Track points lost when teammate loses
-            
-            # Unstoppable Trio (Only if all 3 are frequent players)
-            if len(tms) == 2 and won:
-                trio_members = [l] + tms
+            # Track trios (only for games with 8+ players, and all must be frequent players)
+            if process_trios and won and len(teammates) == 2:
+                trio_members = [leader] + teammates
                 if all(member in frequent_players for member in trio_members):
-                    trio_key = " & ".join(sorted(trio_members))
+                    trio_key = tuple(sorted(trio_members))
                     trios[trio_key] += 1
-
-    # --- PROCESSING RESULTS ---
-    final_results = []
-    for p in frequent_players:
-        # Calculate stats for the frequent player
-        avg_bid = sum(leads_points[p]) / len(leads_points[p]) if leads_points[p] else 0
-        l_win_rate = (leads_wins[p] / leads_count[p] * 100) if leads_count[p] > 0 else 0
-        tm_win_rate = (tm_wins[p] / tm_count[p] * 100) if tm_count[p] > 0 else 0
-        fav_ally = partnerships[p].most_common(1)[0][0] if partnerships[p] else "None"
-        
-        # Overall Win Rate (Champion Stat)
-        overall_win_rate = (total_wins[p] / total_rounds[p] * 100) if total_rounds[p] > 0 else 0
-        
-        # The Traitor (Net Point Loss as Teammate)
-        avg_points_lost = (tm_points_lost[p] / tm_losses[p]) if tm_losses[p] > 0 else 0
-        
-        # Find nemesis (partnership with most losses)
-        # Check both directions: when p is leader, and when p is teammate
-        nemesis_losses = Counter()
-        # When p is leader, track which teammates they lose with
-        if partnership_losses[p]:
-            for tm, loss_count in partnership_losses[p].items():
-                nemesis_losses[tm] += loss_count
-        # When p is teammate, track which leaders they lose with
-        for leader in frequent_players:
-            if p in partnership_losses[leader]:
-                loss_count = partnership_losses[leader][p]
-                nemesis_losses[leader] += loss_count
-        
-        nemesis = None
-        if nemesis_losses:
-            nemesis_player, nemesis_count = nemesis_losses.most_common(1)[0]
-            if nemesis_count > 0:
-                nemesis = nemesis_player
-
-        # Count unique games played
-        games_count = len(games_played[p])
-
-        final_results.append({
-            "name": p,
-            "avg_bid": round(avg_bid, 1),
-            "l_win_rate": round(l_win_rate, 1),
-            "clutch": clutch_wins[p],
-            "called": tm_count[p],
-            "tm_win_rate": round(tm_win_rate, 1),
-            "over_sells": over_sellers[p],
-            "fav_ally": fav_ally,
-            "overall_win_rate": round(overall_win_rate, 1),
-            "avg_points_lost": round(avg_points_lost, 1),
-            "nemesis": nemesis,
-            "games_played": games_count
-        })
-
-    # --- PRINTING THE RECAP ---
-    print("═══ KALI TEERI WRAPPED (FREQUENT PLAYERS ONLY) ═══\n")
-
-    def print_leaderboard(title, key_name, unit="", reverse=True):
-        print(f"--- {title} ---")
-        sorted_list = sorted(final_results, key=lambda x: x[key_name], reverse=reverse)
-        for i, r in enumerate(sorted_list, 1):
-            print(f"{i}. {r['name']}: {r[key_name]}{unit}")
-        print()
-
-    print_leaderboard("THE BOLD BIDDERS", "avg_bid", " pts")
-    print_leaderboard("LEADER CONVERSION RATE", "l_win_rate", "%")
-    print_leaderboard("CLUTCH LEADERS (≥220 Wins)", "clutch")
-    print_leaderboard("MOST CALLED", "called")
-    print_leaderboard("THE KINGMAKERS (Teammate Win %)", "tm_win_rate", "%")
-    print_leaderboard("THE OVER-SELLERS (Lead Losses)", "over_sells")
     
-    # NEW STATISTICS
-    print_leaderboard("MOST GAMES PLAYED", "games_played", " games")
-    print_leaderboard("THE CHAMPIONS (Overall Win Rate)", "overall_win_rate", "%")
-    print_leaderboard("THE TRAITORS (Avg Points Lost as Teammate)", "avg_points_lost", " pts", reverse=False)
+    # Calculate Podium Finishes (1st, 2nd, 3rd place)
+    podium_counts = {
+        '1st': Counter(),
+        '2nd': Counter(),
+        '3rd': Counter()
+    }
     
-    print("--- FAVORITE ALLIES ---")
-    for r in final_results:
-        print(f"{r['name']} ➔ {r['fav_ally']}")
+    for game in data.get('pastGames', []):
+        scores = game.get('scores', {})
+        if not scores:
+            continue
+        
+        # Sort players by score (descending)
+        sorted_players = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+        
+        # Assign podium positions (only to frequent players)
+        for position, (player, score) in enumerate(sorted_players[:3], 1):
+            if player in frequent_players:
+                if position == 1:
+                    podium_counts['1st'][player] += 1
+                elif position == 2:
+                    podium_counts['2nd'][player] += 1
+                elif position == 3:
+                    podium_counts['3rd'][player] += 1
     
-    print("\n--- NEMESIS TRACKING (Worst Partnerships) ---")
-    # Build a comprehensive list of all losing partnerships
-    all_nemesis_pairs = []
-    for leader in frequent_players:
-        for teammate, loss_count in partnership_losses[leader].items():
-            if teammate in frequent_players and loss_count > 0:
-                all_nemesis_pairs.append({
-                    "pair": f"{leader} + {teammate}",
-                    "losses": loss_count
-                })
-    if all_nemesis_pairs:
-        all_nemesis_pairs.sort(key=lambda x: x['losses'], reverse=True)
-        for item in all_nemesis_pairs[:10]:  # Top 10 worst partnerships
-            print(f"{item['pair']}: {item['losses']} losses")
-    else:
-        print("No nemesis partnerships recorded yet.")
+    # Calculate statistics for each frequent player
+    player_stats = {}
     
-    print("\n--- INDIVIDUAL NEMESIS (Each Player's Worst Partner) ---")
-    for r in final_results:
-        if r['nemesis'] and r['nemesis'] in frequent_players:
-            # Calculate total losses with nemesis (both directions)
-            losses_as_leader = partnership_losses[r['name']][r['nemesis']]
-            losses_as_teammate = partnership_losses[r['nemesis']][r['name']] if r['nemesis'] in partnership_losses else 0
-            total_losses = losses_as_leader + losses_as_teammate
-            print(f"{r['name']} ↔ {r['nemesis']}: {total_losses} losses")
-
-    print("\n--- UNSTOPPABLE TRIOS ---")
+    for player in frequent_players:
+        # Most Active (Games Played)
+        games_count = len(games_played[player])
+        
+        # Round Win %: (Total wins) / (Total rounds participated)
+        round_win_pct = (total_wins[player] / total_rounds[player] * 100) if total_rounds[player] > 0 else 0
+        
+        # Leader Conversion Rate: (Wins as leader) / (Times bidding/leading)
+        leader_conv_rate = (leader_wins[player] / leader_count[player] * 100) if leader_count[player] > 0 else 0
+        
+        # The Clutch Player: Total wins as leader with bid >= 200
+        clutch_count = clutch_wins[player]
+        
+        # Teammate Win Rate: (Wins as teammate) / (Times called as teammate)
+        teammate_win_rate = (teammate_wins[player] / teammate_count[player] * 100) if teammate_count[player] > 0 else 0
+        
+        # Podium finishes
+        podium_1st = podium_counts['1st'][player]
+        
+        player_stats[player] = {
+            'games_played': games_count,
+            'round_win_pct': round(round_win_pct, 1),
+            'leader_conv_rate': round(leader_conv_rate, 1),
+            'clutch_wins': clutch_count,
+            'teammate_count': teammate_count[player],
+            'teammate_win_rate': round(teammate_win_rate, 1),
+            'podium_1st': podium_1st
+        }
+    
+    # Find The Most Wanted (most called as teammate)
+    most_wanted_player = None
+    most_wanted_count = 0
+    for player in frequent_players:
+        if teammate_count[player] > most_wanted_count:
+            most_wanted_count = teammate_count[player]
+            most_wanted_player = player
+    
+    # Find The Clutch King (most clutch wins)
+    clutch_king = None
+    clutch_king_count = 0
+    for player in frequent_players:
+        if clutch_wins[player] > clutch_king_count:
+            clutch_king_count = clutch_wins[player]
+            clutch_king = player
+    
+    # Find Unstoppable Trio (top trio with most wins)
+    unstoppable_trio = None
+    unstoppable_trio_wins = 0
     if trios:
-        for combo, count in trios.most_common(5):
-            print(f"{combo}: {count} wins")
-    else:
-        print("No 3-player team wins recorded yet.")
+        top_trio_key, unstoppable_trio_wins = trios.most_common(1)[0]
+        unstoppable_trio = list(top_trio_key)
+    
+    return {
+        'player_stats': player_stats,
+        'most_wanted': {'player': most_wanted_player, 'count': most_wanted_count},
+        'clutch_king': {'player': clutch_king, 'count': clutch_king_count},
+        'unstoppable_trio': {'players': unstoppable_trio, 'wins': unstoppable_trio_wins}
+    }
 
-# Usage
-with open("data.json", "r") as f:
-    game_data = json.load(f)
-generate_frequent_player_wrapped(game_data)
+
+def print_stats(stats):
+    """Print all statistics to console for verification."""
+    player_stats = stats['player_stats']
+    
+    print("=" * 60)
+    print("KALI TEERI WRAPPED 2025 - STATISTICS")
+    print("=" * 60)
+    print()
+    
+    # Most Active (Games Played)
+    print("--- THE ACTIVE LEGENDS (Games Played) ---")
+    sorted_games = sorted(player_stats.items(), key=lambda x: x[1]['games_played'], reverse=True)
+    for i, (player, data) in enumerate(sorted_games, 1):
+        print(f"{i}. {player}: {data['games_played']} games")
+    print()
+    
+    # Round Win % (Champions)
+    print("--- THE CHAMPIONS (Round Win %) ---")
+    sorted_win_pct = sorted(player_stats.items(), key=lambda x: x[1]['round_win_pct'], reverse=True)
+    for i, (player, data) in enumerate(sorted_win_pct, 1):
+        print(f"{i}. {player}: {data['round_win_pct']}%")
+    print()
+    
+    # Leader Conversion Rate (Closers)
+    print("--- THE CLOSERS (Leader Conversion Rate) ---")
+    sorted_conv = sorted(player_stats.items(), key=lambda x: x[1]['leader_conv_rate'], reverse=True)
+    for i, (player, data) in enumerate(sorted_conv, 1):
+        if data['leader_conv_rate'] > 0:  # Only show players who have led
+            print(f"{i}. {player}: {data['leader_conv_rate']}%")
+    print()
+    
+    # Clutch King
+    clutch_king = stats['clutch_king']
+    print("--- CLUTCH KING ---")
+    if clutch_king['player']:
+        print(f"{clutch_king['player']}: {clutch_king['count']} wins with bid >= 200")
+    else:
+        print("No clutch wins recorded")
+    print()
+    
+    # Most Wanted
+    most_wanted = stats['most_wanted']
+    print("--- THE MOST WANTED ---")
+    if most_wanted['player']:
+        print(f"{most_wanted['player']}: Called {most_wanted['count']} times")
+    else:
+        print("No teammate calls recorded")
+    print()
+    
+    # Teammate Win Rate (Kingmakers)
+    print("--- THE KINGMAKERS (Teammate Win Rate) ---")
+    sorted_tm_win = sorted(player_stats.items(), key=lambda x: x[1]['teammate_win_rate'], reverse=True)
+    for i, (player, data) in enumerate(sorted_tm_win, 1):
+        if data['teammate_win_rate'] > 0:  # Only show players who have been teammates
+            print(f"{i}. {player}: {data['teammate_win_rate']}%")
+    print()
+    
+    # Unstoppable Trio
+    unstoppable_trio = stats['unstoppable_trio']
+    print("--- UNSTOPPABLE TRIO ---")
+    if unstoppable_trio['players']:
+        players_str = ", ".join(unstoppable_trio['players'])
+        print(f"{players_str}: {unstoppable_trio['wins']} wins together")
+    else:
+        print("No trio wins recorded")
+    print()
+    
+    # Podium Finishes (1st place)
+    print("--- THE PODIUM (Most 1st Place Finishes) ---")
+    sorted_podium = sorted(player_stats.items(), key=lambda x: x[1]['podium_1st'], reverse=True)
+    for i, (player, data) in enumerate(sorted_podium, 1):
+        print(f"{i}. {player}: {data['podium_1st']} first place finishes")
+    print()
+    
+    print("=" * 60)
+
+
+def generate_wrapped_data_js(stats):
+    """
+    Generate the wrapped_data.js file content in the correct format.
+    Returns the JavaScript code as a string.
+    """
+    player_stats = stats['player_stats']
+    
+    # Build the slides array
+    slides = []
+    
+    # 1. Intro Slide
+    slides.append({
+        'type': 'intro',
+        'title': '2025',
+        'subtitle': 'Kali Teeri Wrapped',
+        'theme': 'theme-intro'
+    })
+    
+    # 2. The Active Legends (Games Played)
+    sorted_games = sorted(player_stats.items(), key=lambda x: x[1]['games_played'], reverse=True)
+    slides.append({
+        'type': 'ranked_list',
+        'title': 'The Active Legends',
+        'items': [{'label': player, 'value': f"{data['games_played']} games"} 
+                 for player, data in sorted_games],
+        'theme': 'theme-1'
+    })
+    
+    # 3. The Champions (Round Win %)
+    sorted_win_pct = sorted(player_stats.items(), key=lambda x: x[1]['round_win_pct'], reverse=True)
+    slides.append({
+        'type': 'ranked_list',
+        'title': 'The Champions',
+        'items': [{'label': player, 'value': f"{data['round_win_pct']}%"} 
+                 for player, data in sorted_win_pct],
+        'theme': 'theme-4'
+    })
+    
+    # 4. The Closers (Leader Conversion Rate)
+    sorted_conv = sorted(player_stats.items(), key=lambda x: x[1]['leader_conv_rate'], reverse=True)
+    sorted_conv = [(p, d) for p, d in sorted_conv if d['leader_conv_rate'] > 0]  # Filter out zeros
+    slides.append({
+        'type': 'ranked_list',
+        'title': 'The Closers',
+        'items': [{'label': player, 'value': f"{data['leader_conv_rate']}%"} 
+                 for player, data in sorted_conv],
+        'theme': 'theme-2'
+    })
+    
+    # 5. Clutch King
+    clutch_king = stats['clutch_king']
+    if clutch_king['player']:
+        slides.append({
+            'type': 'big_highlight',
+            'title': 'Clutch King',
+            'name': clutch_king['player'],
+            'stat': f"{clutch_king['count']} Wins ≥ 200 pts",
+            'description': 'The master of high-stakes victories.',
+            'theme': 'theme-5'
+        })
+    
+    # 6. The Most Wanted
+    most_wanted = stats['most_wanted']
+    if most_wanted['player']:
+        slides.append({
+            'type': 'big_highlight',
+            'title': 'The Most Wanted',
+            'name': most_wanted['player'],
+            'stat': f"{most_wanted['count']} Times Called",
+            'description': 'The most sought-after teammate of 2025.',
+            'theme': 'theme-3'
+        })
+    
+    # 7. The Kingmakers (Teammate Win Rate)
+    sorted_tm_win = sorted(player_stats.items(), key=lambda x: x[1]['teammate_win_rate'], reverse=True)
+    sorted_tm_win = [(p, d) for p, d in sorted_tm_win if d['teammate_win_rate'] > 0]  # Filter out zeros
+    slides.append({
+        'type': 'ranked_list',
+        'title': 'The Kingmakers',
+        'items': [{'label': player, 'value': f"{data['teammate_win_rate']}%"} 
+                 for player, data in sorted_tm_win],
+        'theme': 'theme-1'
+    })
+    
+    # 8. Unstoppable Trio
+    unstoppable_trio = stats['unstoppable_trio']
+    if unstoppable_trio['players']:
+        players_str = ", ".join(unstoppable_trio['players'])
+        slides.append({
+            'type': 'big_highlight',
+            'title': 'Unstoppable Trio',
+            'name': players_str,
+            'stat': f"{unstoppable_trio['wins']} Wins Together",
+            'description': 'The dream team that dominated the deck.',
+            'theme': 'theme-4'
+        })
+    
+    # 9. The Podium (Most 1st place finishes)
+    sorted_podium = sorted(player_stats.items(), key=lambda x: x[1]['podium_1st'], reverse=True)
+    slides.append({
+        'type': 'ranked_list',
+        'title': 'The Podium',
+        'items': [{'label': player, 'value': f"{data['podium_1st']} first place finishes"} 
+                 for player, data in sorted_podium],
+        'theme': 'theme-2'
+    })
+    
+    # Generate JavaScript code
+    js_lines = ["// Kali Teeri Wrapped 2025 Data", "const wrappedData = ["]
+    
+    for i, slide in enumerate(slides):
+        js_lines.append("  {")
+        if slide['type'] == 'intro':
+            js_lines.append(f"    type: \"{slide['type']}\",")
+            js_lines.append(f"    title: \"{slide['title']}\",")
+            js_lines.append(f"    subtitle: \"{slide['subtitle']}\",")
+            js_lines.append(f"    theme: \"{slide['theme']}\",")
+        elif slide['type'] == 'ranked_list':
+            js_lines.append(f"    type: \"{slide['type']}\",")
+            js_lines.append(f"    title: \"{slide['title']}\",")
+            js_lines.append("    items: [")
+            for item in slide['items']:
+                js_lines.append(f"      {{ label: \"{item['label']}\", value: \"{item['value']}\" }},")
+            js_lines.append("    ],")
+            js_lines.append(f"    theme: \"{slide['theme']}\",")
+        elif slide['type'] == 'big_highlight':
+            js_lines.append(f"    type: \"{slide['type']}\",")
+            js_lines.append(f"    title: \"{slide['title']}\",")
+            js_lines.append(f"    name: \"{slide['name']}\",")
+            js_lines.append(f"    stat: \"{slide['stat']}\",")
+            js_lines.append(f"    description: \"{slide['description']}\",")
+            js_lines.append(f"    theme: \"{slide['theme']}\",")
+        
+        js_lines.append("  },")
+    
+    js_lines.append("];")
+    
+    return "\n".join(js_lines)
+
+
+# Main execution
+if __name__ == "__main__":
+    # Load data
+    with open("data.json", "r") as f:
+        game_data = json.load(f)
+    
+    # Calculate statistics
+    stats = calculate_stats(game_data)
+    
+    # Print statistics to console
+    print_stats(stats)
+    
+    # Generate wrapped_data.js content
+    js_content = generate_wrapped_data_js(stats)
+    
+    # Write to file
+    with open("wrapped_data.js", "w") as f:
+        f.write(js_content)
+    
+    print("\n✓ wrapped_data.js has been generated successfully!")
