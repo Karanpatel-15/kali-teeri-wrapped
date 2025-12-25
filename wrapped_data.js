@@ -53,11 +53,6 @@ const wrappedData = [
     title: "The Most Wanted",
     name: "Hiral & Pinkey",
     stat: "125 Times Called",
-    // New data structure for the Podium layout
-    extraPlayers: [
-      { name: "Reena", stat: "116" },
-      { name: "Rajen", stat: "107" },
-    ],
     description: "The most sought-after teammates of 2025.",
     theme: "theme-3",
   },
@@ -77,22 +72,6 @@ const wrappedData = [
       { label: "Rajen", value: "55.1%" },
     ],
     theme: "theme-1",
-  },
-  {
-    type: "ranked_list",
-    title: "Individual Nemesis",
-    items: [
-      { label: "Paresh ↔ Yogesh", value: "23 losses" },
-      { label: "Pinkey ↔ Yogesh", value: "23 losses" },
-      { label: "Rajen ↔ Yogesh", value: "22 losses" },
-      { label: "Samir ↔ Yogesh", value: "22 losses" },
-      { label: "Hiral ↔ Yogesh", value: "17 losses" },
-      { label: "Mital ↔ Yogesh", value: "17 losses" },
-      { label: "Jesal ↔ Yogesh", value: "13 losses" },
-      { label: "Apurv ↔ Yogesh", value: "12 losses" },
-      { label: "Reena ↔ Yogesh", value: "12 losses" },
-    ],
-    theme: "theme-3",
   },
   {
     type: "big_highlight",
