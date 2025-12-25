@@ -1,0 +1,5347 @@
+{
+  "frequentNames": [
+    "Yogesh",
+    "Pinkey",
+    "Apurv",
+    "Jesal",
+    "Paresh",
+    "Hiral",
+    "Samir",
+    "Mital",
+    "Rajen",
+    "Reena"
+  ],
+  "leaderLosePoints": -1,
+  "leaderWinPoints": "2x",
+  "pastGames": [
+    {
+      "scores": {
+        "Yogesh": 745,
+        "Pinkey": 200,
+        "Apurv": 945,
+        "Jesal": 395,
+        "Paresh": 785,
+        "Hiral": 395,
+        "Samir": 755,
+        "Mital": 950,
+        "Rajen": 195,
+        "Reena": 1130
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Jesal"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Reena"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Rajen"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Samir", "Apurv"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Reena"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Mital", "Jesal"],
+          "points": 195,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-09-07T02:32:41.819Z"
+    },
+    {
+      "scores": {
+        "Yogesh": -270,
+        "Pinkey": 270,
+        "Paresh": 270,
+        "Hiral": 270,
+        "Samir": 0,
+        "Mital": 270,
+        "Rajen": 270,
+        "Reena": 270
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir"],
+          "points": 270,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-09-07T01:09:37.636Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 880,
+        "Pinkey": 1010,
+        "Apurv": 795,
+        "Jesal": 750,
+        "Hiral": 595,
+        "Paresh": 750,
+        "Samir": 550,
+        "Mital": 750,
+        "Rajen": 1315,
+        "Reena": 370
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Hiral"],
+          "points": 155,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Mital", "Reena"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Rajen", "Reena"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Apurv"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Yogesh", "Samir"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Mital"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 155,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Pinkey"],
+          "points": 195,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Hiral",
+        "Paresh",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-08-04T17:15:47.133Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 260,
+        "Pinkey": 285,
+        "Paresh": 625,
+        "Hiral": 565,
+        "Samir": 635,
+        "Mital": 1235,
+        "Rajen": 835,
+        "Reena": 680,
+        "Rakesh": 715,
+        "Soniya": 765
+      },
+      "rounds": [
+        {
+          "leader": "Rakesh",
+          "teammates": ["Yogesh", "Reena"],
+          "points": 155,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Soniya", "Rakesh", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Mital", "Pinkey"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Pinkey", "Rakesh"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Soniya"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Samir", "Rakesh", "Mital"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena",
+        "Rakesh",
+        "Soniya"
+      ],
+      "date": "2025-07-06T03:00:20.106Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1510,
+        "Pinkey": 1120,
+        "Samir": 1290,
+        "Mital": 405,
+        "Rakesh Panchal": 525,
+        "Soniya": 1010,
+        "Rakesh Patel": 730,
+        "Rupal": 370
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Soniya", "Rakesh Panchal"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rakesh Patel", "Yogesh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Rakesh Panchal",
+          "teammates": ["Rakesh Patel", "Soniya"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rupal", "Samir"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rupal", "Pinkey"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Rakesh Panchal",
+          "teammates": ["Rakesh Patel", "Soniya"],
+          "points": 155,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Soniya", "Yogesh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Rakesh Patel"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Soniya", "Pinkey"],
+          "points": 180,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Samir",
+        "Mital",
+        "Rakesh Panchal",
+        "Soniya",
+        "Rakesh Patel",
+        "Rupal"
+      ],
+      "date": "2025-07-05T04:13:10.252Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 2305,
+        "Pinkey": 1245,
+        "Apurv": 1585,
+        "Jesal": 1335,
+        "Paresh": 1665,
+        "Hiral": 1425,
+        "Rajen": 375,
+        "Reena": 1825
+      },
+      "rounds": [
+        {
+          "leader": "Jesal",
+          "teammates": ["Paresh", "Apurv"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Reena"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Jesal"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Rajen"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv", "Reena"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral", "Yogesh"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Pinkey"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Hiral"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal", "Yogesh"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Pinkey", "Jesal"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Yogesh", "Apurv"],
+          "points": 185,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-06-29T03:43:04.770Z"
+    },
+    {
+      "scores": {
+        "Pinkey": 690,
+        "Yogesh": 140,
+        "Jesal": 560,
+        "Apurv": 1230,
+        "Paresh": 790,
+        "Hiral": 975,
+        "Samir": 975,
+        "Mital": 200,
+        "Rajen": 780,
+        "Reena": 775
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Reena", "Paresh"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Hiral", "Pinkey", "Samir"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Jesal", "Samir", "Reena"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Jesal"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Rajen", "Apurv"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Mital"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Pinkey",
+        "Yogesh",
+        "Jesal",
+        "Apurv",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-06-22T21:12:29.083Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1630,
+        "Pinkey": 2990,
+        "Paresh": 1300,
+        "Hiral": 1695,
+        "Samir": 1300,
+        "Mital": 920,
+        "Rajen": 2285,
+        "Reena": 960
+      },
+      "rounds": [
+        {
+          "leader": "Reena",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Samir", "Pinkey"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena", "Paresh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Mital", "Yogesh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Rajen"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Paresh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Paresh"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Samir", "Reena"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena", "Paresh"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Pinkey"],
+          "points": 270,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-06-08T03:28:36.842Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1425,
+        "Pinkey": 405,
+        "Apurv": 810,
+        "Jesal": 620,
+        "Paresh": 1215,
+        "Hiral": -5,
+        "Samir": 405,
+        "Mital": 1010,
+        "Rajen": 805,
+        "Reena": 600
+      },
+      "rounds": [
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Apurv", "Paresh"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Mital"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Mital", "Reena"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh", "Rajen", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal", "Mital"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Jesal", "Apurv"],
+          "points": 205,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-05-25T03:41:08.440Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1735,
+        "Pinkey": 1615,
+        "Paresh": 2080,
+        "Hiral": 2010,
+        "Samir": 1420,
+        "Mital": 770,
+        "Rajen": 1340,
+        "Reena": 1595
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Pinkey"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Pinkey", "Paresh"],
+          "points": 215,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir", "Rajen"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rajen", "Reena"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh", "Pinkey"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Hiral"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Mital", "Hiral"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Mital"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Mital"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Mital", "Yogesh"],
+          "points": 235,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Mital"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Paresh", "Samir"],
+          "points": 245,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Mital"],
+          "points": 185,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-05-25T00:52:37.970Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 0,
+        "Pinkey": 185,
+        "Paresh": 0,
+        "Hiral": 190,
+        "Samir": 750,
+        "Mital": 0,
+        "Rajen": 185,
+        "Reena": 0
+      },
+      "rounds": [
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Pinkey"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Hiral"],
+          "points": 190,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-05-18T01:51:20.176Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 625,
+        "Pinkey": 740,
+        "Paresh": 435,
+        "Hiral": 660,
+        "Samir": 635,
+        "Mital": 635,
+        "Rajen": 365,
+        "Reena": 200
+      },
+      "rounds": [
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Reena"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral"],
+          "points": 225,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 200,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-05-11T03:40:09.873Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 310,
+        "Pinkey": -10,
+        "Apurv": 520,
+        "Jesal": 680,
+        "Paresh": 160,
+        "Hiral": 640,
+        "Samir": 215,
+        "Mital": 310,
+        "Rajen": 720,
+        "Reena": 0
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Reena", "Apurv"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Paresh", "Reena"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Apurv", "Jesal"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv", "Jesal", "Samir"],
+          "points": 205,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-05-11T03:04:21.783Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1855,
+        "Pinkey": 1690,
+        "Paresh": 1890,
+        "Hiral": 1630,
+        "Samir": 2455,
+        "Mital": 1530,
+        "Rajen": 2035,
+        "Reena": 565
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen"],
+          "points": 155,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Mital"],
+          "points": 155,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Reena"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Hiral"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Samir", "Hiral"],
+          "points": 220,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey", "Samir"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh", "Hiral"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir", "Paresh"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Yogesh"],
+          "points": 270,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-05-04T03:30:30.621Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 370,
+        "Pinkey": 970,
+        "Apurv": 1185,
+        "Jesal": 765,
+        "Paresh": 1285,
+        "Hiral": 960,
+        "Samir": 965,
+        "Mital": 825,
+        "Rajen": 1385,
+        "Reena": 555,
+        "Arjun": 760,
+        "Shreya": 770
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv", "Pinkey", "Mital"],
+          "points": 215,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Apurv", "Reena", "Arjun"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Yogesh", "Hiral", "Shreya"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Mital"],
+          "points": 155,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv", "Shreya", "Yogesh"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Shreya", "Jesal", "Arjun"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir", "Shreya", "Reena"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Jesal", "Apurv"],
+          "points": 200,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena",
+        "Arjun",
+        "Shreya"
+      ],
+      "date": "2025-05-04T01:22:21.464Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 200,
+        "Pinkey": 200,
+        "Apurv": 400,
+        "Jesal": 1030,
+        "Paresh": 200,
+        "Hiral": 815,
+        "Samir": 1215,
+        "Mital": 415,
+        "Rajen": 400,
+        "Reena": 400
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Mital"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Mital", "Samir", "Hiral"],
+          "points": 215,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Hiral", "Paresh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Jesal", "Apurv"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Jesal", "Mital", "Hiral"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-04-20T03:40:24.123Z"
+    },
+    {
+      "scores": {
+        "Yogesh": -80,
+        "Pinkey": 1005,
+        "Paresh": 905,
+        "Hiral": 350,
+        "Samir": 350,
+        "Mital": 650,
+        "Rajen": 1695,
+        "Reena": 165
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Reena"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Mital", "Rajen"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena", "Samir"],
+          "points": 190,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-04-19T23:03:18.182Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 240,
+        "Pinkey": 600,
+        "Apurv": 560,
+        "Jesal": 160,
+        "Paresh": 760,
+        "Hiral": 560,
+        "Samir": 560,
+        "Mital": 160,
+        "Rajen": 160,
+        "Reena": 360
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Paresh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Mital", "Jesal", "Reena"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Jesal"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 160,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-04-13T02:47:10.232Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 0,
+        "Pinkey": 200,
+        "Apurv": 0,
+        "Jesal": 400,
+        "Paresh": 200,
+        "Hiral": 0,
+        "Samir": 0,
+        "Mital": 0,
+        "Rajen": 0,
+        "Reena": 0
+      },
+      "rounds": [
+        {
+          "leader": "Jesal",
+          "teammates": ["Paresh", "Pinkey"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-04-13T01:45:24.566Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1230,
+        "Pinkey": -30,
+        "Apurv": 1145,
+        "Jesal": 1015,
+        "Paresh": 500,
+        "Hiral": 825,
+        "Samir": 1155,
+        "Mital": 1040,
+        "Rajen": 680,
+        "Reena": 660
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Jesal", "Rajen"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rajen", "Yogesh"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Jesal", "Mital"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Samir"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Apurv"],
+          "points": 155,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Paresh"],
+          "points": 150,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-03-30T03:33:51.341Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 895,
+        "Pinkey": 1785,
+        "Apurv": 1190,
+        "Jesal": 1270,
+        "Paresh": 835,
+        "Hiral": 1010,
+        "Samir": 385,
+        "Mital": 80
+      },
+      "rounds": [
+        {
+          "leader": "Jesal",
+          "teammates": ["Apurv", "Pinkey"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Samir", "Apurv"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Paresh"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh", "Pinkey"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Pinkey", "Jesal"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh", "Jesal"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Samir"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Pinkey", "Yogesh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 180,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital"
+      ],
+      "date": "2025-03-23T03:40:34.307Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 2260,
+        "Pinkey": 755,
+        "Paresh": 1355,
+        "Hiral": 725,
+        "Samir": 1540,
+        "Rajen": 1140,
+        "Reena": 950
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena", "Hiral"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Samir", "Paresh"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Samir"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Samir", "Yogesh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 190,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-03-16T03:51:49.613Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 155,
+        "Pinkey": 770,
+        "Apurv": 1615,
+        "Jesal": 1570,
+        "Paresh": 1715,
+        "Hiral": 1305,
+        "Rajen": 1125,
+        "Reena": 1015,
+        "Samir": 1015
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Apurv"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Samir"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Reena", "Hiral"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Yogesh", "Paresh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv", "Pinkey"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Hiral", "Samir"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Paresh", "Samir"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv", "Hiral"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Reena"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Jesal"],
+          "points": 205,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Rajen",
+        "Reena",
+        "Samir"
+      ],
+      "date": "2025-03-09T04:36:05.790Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1475,
+        "Pinkey": 1455,
+        "Paresh": 420,
+        "Hiral": 50,
+        "Samir": 1650,
+        "Rajen": 1470,
+        "Reena": 540
+      },
+      "rounds": [
+        {
+          "leader": "Hiral",
+          "teammates": ["Paresh"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Samir"],
+          "points": 155,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Reena"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Reena"],
+          "points": 170,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-03-09T02:22:52.396Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 550,
+        "Pinkey": 510,
+        "Apurv": 1185,
+        "Jesal": 860,
+        "Paresh": 865,
+        "Hiral": 700,
+        "Samir": 840,
+        "Mital": 1000,
+        "Rajen": 135,
+        "Reena": 1370
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv", "Pinkey"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Rajen", "Samir"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir", "Mital"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Hiral"],
+          "points": 155,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv", "Reena"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 160,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-03-02T02:13:59.724Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 875,
+        "Pinkey": 2035,
+        "Apurv": 1415,
+        "Jesal": 1085,
+        "Paresh": 445,
+        "Hiral": 520,
+        "Rajen": 830,
+        "Reena": 1135,
+        "Ria": 565
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Apurv"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Ria", "Jesal"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Yogesh"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Ria",
+          "teammates": ["Hiral", "Reena"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Jesal", "Yogesh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Reena", "Ria"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen", "Yogesh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 170,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Rajen",
+        "Reena",
+        "Ria"
+      ],
+      "date": "2025-02-16T04:08:07.830Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1225,
+        "Apurv": 1270,
+        "Jesal": 1600,
+        "Paresh": 175,
+        "Hiral": 885,
+        "Samir": 1255,
+        "Mital": 545,
+        "Rajen": 545,
+        "Reena": 1245
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Mital", "Paresh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv", "Paresh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Apurv", "Samir"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Jesal", "Paresh"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir", "Rajen"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Rajen"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Reena", "Hiral"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Jesal"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Hiral"],
+          "points": 175,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-02-09T04:23:47.038Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 515,
+        "Pinkey": 595,
+        "Apurv": 805,
+        "Jesal": 195,
+        "Paresh": 395,
+        "Hiral": 360,
+        "Mital": 805,
+        "Samir": 520,
+        "Rajen": 220,
+        "Reena": 445
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Rajen"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Rajen", "Hiral"],
+          "points": 245,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Yogesh", "Reena"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Mital", "Hiral"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Yogesh", "Paresh", "Hiral"],
+          "points": 200,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Mital",
+        "Samir",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-02-02T05:01:15.751Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 630,
+        "Apurv": 610,
+        "Paresh": 435,
+        "Samir": 610,
+        "Rajen": 435,
+        "Karan": 175,
+        "Param": 70
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Karan"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Param",
+          "teammates": ["Karan"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen"],
+          "points": 175,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Apurv",
+        "Paresh",
+        "Samir",
+        "Rajen",
+        "Karan",
+        "Param"
+      ],
+      "date": "2025-02-02T00:42:54.369Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1135,
+        "Pinkey": 1210,
+        "Apurv": 705,
+        "Jesal": 845,
+        "Paresh": 980,
+        "Hiral": 820,
+        "Samir": 840,
+        "Mital": 1020,
+        "Rajen": 500,
+        "Reena": 1005
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Reena"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Mital", "Rajen"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Samir"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv", "Rajen"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Mital", "Apurv"],
+          "points": 150,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Apurv", "Pinkey", "Reena"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Apurv", "Jesal"],
+          "points": 155,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Hiral", "Mital"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Yogesh", "Reena"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Mital", "Reena"],
+          "points": 150,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-02-02T00:18:17.307Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 30,
+        "Pinkey": 1550,
+        "Apurv": 1365,
+        "Jesal": 1335,
+        "Paresh": 410,
+        "Hiral": 925,
+        "Samir": 940,
+        "Mital": 1100,
+        "Rajen": 1145,
+        "Reena": 710
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Jesal"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv", "Hiral"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral"],
+          "points": 220,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Jesal", "Rajen"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Rajen"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Jesal", "Mital"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Mital"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Samir"],
+          "points": 160,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-01-12T04:19:15.506Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1195,
+        "Pinkey": 525,
+        "Karan": 370,
+        "Dhru": 350
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Dhru"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Dhru"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Karan",
+          "teammates": ["Yogesh"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Karan",
+          "teammates": ["Dhru"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Dhru"],
+          "points": 195,
+          "result": false
+        }
+      ],
+      "players": ["Yogesh", "Pinkey", "Karan", "Dhru"],
+      "date": "2025-01-12T02:16:57.024Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 380,
+        "Pinkey": 800,
+        "Apurv": 410,
+        "Jesal": 1860,
+        "Paresh": 1250,
+        "Hiral": 1340,
+        "Samir": 590,
+        "Mital": 1135,
+        "Reena": 875,
+        "Rajen": 1070
+      },
+      "rounds": [
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena", "Rajen"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Yogesh", "Paresh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Paresh"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Jesal", "Apurv"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Pinkey", "Hiral"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Jesal", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Samir", "Rajen"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Hiral"],
+          "points": 195,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Reena",
+        "Rajen"
+      ],
+      "date": "2025-01-06T18:30:06.759Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 675,
+        "Pinkey": 1615,
+        "Paresh": 875,
+        "Jesal": 875,
+        "Apurv": 1345,
+        "Hiral": 1685,
+        "Samir": 1140,
+        "Mital": 1415,
+        "Rajen": 605,
+        "Reena": 1685
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Reena"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Jesal", "Mital"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Paresh", "Reena"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Samir"],
+          "points": 200,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Jesal",
+        "Apurv",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-01-01T02:25:45.718Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 280,
+        "Pinkey": 630,
+        "Paresh": 1715,
+        "Hiral": 525,
+        "Samir": 1395,
+        "Mital": 90
+      },
+      "rounds": [
+        {
+          "leader": "Samir",
+          "teammates": ["Hiral"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Pinkey"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Paresh"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Samir"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Hiral"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral"],
+          "points": 180,
+          "result": true
+        }
+      ],
+      "players": ["Yogesh", "Pinkey", "Paresh", "Hiral", "Samir", "Mital"],
+      "date": "2024-12-29T02:35:22.446Z"
+    },
+    {
+      "scores": {
+        "Yogesh": -360,
+        "Pinkey": 1145,
+        "Apurv": 890,
+        "Jesal": 955,
+        "Paresh": 970,
+        "Hiral": 1340,
+        "Samir": 955,
+        "Mital": 1145,
+        "Rajen": 165,
+        "Reena": 560
+      },
+      "rounds": [
+        {
+          "leader": "Apurv",
+          "teammates": ["Hiral", "Rajen"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Samir", "Hiral"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh", "Samir"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Hiral", "Jesal"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Rajen"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal", "Mital"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Pinkey"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 180,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-12-26T02:49:22.982Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1415,
+        "Pinkey": 855,
+        "Apurv": 735,
+        "Jesal": 920,
+        "Paresh": 600,
+        "Hiral": 660,
+        "Samir": 1195,
+        "Mital": 785,
+        "Rajen": 395
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Mital"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Rajen", "Samir"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Apurv"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Jesal", "Paresh"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Jesal"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Mital"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Pinkey", "Yogesh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Hiral"],
+          "points": 270,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen"
+      ],
+      "date": "2024-12-15T04:22:10.982Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1030,
+        "Pinkey": -10,
+        "Apurv": 200,
+        "Jesal": 395,
+        "Paresh": 590,
+        "Hiral": 420,
+        "Mital": 200,
+        "Karan": 415
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Karan"],
+          "points": 225,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Karan"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Jesal"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Karan"],
+          "points": 200,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Mital",
+        "Karan"
+      ],
+      "date": "2024-12-15T03:14:11.900Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 485,
+        "Apurv": 530,
+        "Paresh": 340,
+        "Samir": 515,
+        "Rajen": 1055
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Paresh"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Paresh"],
+          "points": 165,
+          "result": true
+        }
+      ],
+      "players": ["Yogesh", "Apurv", "Paresh", "Samir", "Rajen"],
+      "date": "2024-12-15T01:59:05.362Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 200,
+        "Apurv": 0,
+        "Pinkey": 400,
+        "Jesal": 0,
+        "Paresh": 0,
+        "Hiral": 0,
+        "Samir": 0,
+        "Mital": 0,
+        "Rajen": 0,
+        "Reena": 200
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Yogesh", "Reena"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Apurv",
+        "Pinkey",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-12-14T23:58:18.202Z"
+    },
+    {
+      "scores": {
+        "Yogesh": -10,
+        "Apurv": 340,
+        "Paresh": 185,
+        "Samir": 0,
+        "Karan": 515
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh"],
+          "points": 175,
+          "result": false
+        }
+      ],
+      "players": ["Yogesh", "Apurv", "Paresh", "Samir", "Karan"],
+      "date": "2024-12-01T00:58:21.295Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1820,
+        "Pinkey": 1055,
+        "Apurv": 2000,
+        "Jesal": 2485,
+        "Paresh": 2460,
+        "Hiral": 1340,
+        "Samir": 1740,
+        "Mital": 2465,
+        "Rajen": 2990,
+        "Reena": 2110
+      },
+      "rounds": [
+        {
+          "leader": "Apurv",
+          "teammates": ["Rajen"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Mital"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Mital"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Paresh"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Jesal"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Jesal", "Apurv"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Jesal", "Hiral"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Reena", "Mital"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Yogesh", "Apurv"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir", "Jesal"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Jesal", "Samir"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Apurv", "Reena"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Rajen", "Paresh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Paresh"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Yogesh", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Pinkey", "Jesal"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Reena", "Mital"],
+          "points": 175,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-24T04:57:45.243Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1130,
+        "Apurv": 660,
+        "Paresh": 20,
+        "Samir": 670,
+        "Rajen": 480
+      },
+      "rounds": [
+        {
+          "leader": "Apurv",
+          "teammates": ["Samir"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Paresh"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh"],
+          "points": 150,
+          "result": false
+        }
+      ],
+      "players": ["Yogesh", "Apurv", "Paresh", "Samir", "Rajen"],
+      "date": "2024-11-24T02:23:02.843Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 630,
+        "Pinkey": 1745,
+        "Apurv": 3185,
+        "Jesal": 2220,
+        "Paresh": 3005,
+        "Hiral": 2815,
+        "Samir": 3100,
+        "Mital": 2965,
+        "Rajen": 2425,
+        "Reena": 2270
+      },
+      "rounds": [
+        {
+          "leader": "Reena",
+          "teammates": ["Apurv", "Pinkey"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Hiral", "Mital"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Jesal"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Mital"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Reena"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Jesal"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Paresh"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Jesal", "Samir"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal", "Samir"],
+          "points": 235,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir", "Apurv"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Jesal", "Apurv"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Apurv", "Reena"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Rajen"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Mital", "Rajen"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Samir"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv", "Mital"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir", "Hiral"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Paresh", "Samir"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Reena", "Jesal"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Hiral", "Reena"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Mital", "Jesal"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir", "Rajen"],
+          "points": 195,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-17T04:25:25.827Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 730,
+        "Apurv": 485,
+        "Paresh": 640,
+        "Samir": 210,
+        "Rajen": 1370
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Yogesh"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Rajen"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv"],
+          "points": 210,
+          "result": false
+        }
+      ],
+      "players": ["Yogesh", "Apurv", "Paresh", "Samir", "Rajen"],
+      "date": "2024-11-17T01:31:02.184Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 930,
+        "Pinkey": -15,
+        "Paresh": 980,
+        "Hiral": 780,
+        "Samir": 600,
+        "Mital": 650,
+        "Rajen": 1045,
+        "Reena": 1260
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Mital", "Paresh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Rajen"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Samir", "Reena"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Rajen"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Pinkey"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Rajen", "Reena"],
+          "points": 195,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-10T04:45:11.735Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1200,
+        "Pinkey": 20,
+        "Hiral": 1030,
+        "Samir": 1350,
+        "Mital": 1030,
+        "Rajen": 185,
+        "Reena": 1210
+      },
+      "rounds": [
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Yogesh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena", "Pinkey"],
+          "points": 220,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Hiral", "Yogesh"],
+          "points": 220,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Mital"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Rajen"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Reena", "Samir"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Mital"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Yogesh", "Samir"],
+          "points": 205,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-10T03:36:02.880Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 540,
+        "Pinkey": 0,
+        "Apurv": 395,
+        "Jesal": 400,
+        "Paresh": 385,
+        "Hiral": 470,
+        "Samir": 390,
+        "Mital": 270,
+        "Rajen": 380,
+        "Reena": 0
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Hiral"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Apurv", "Hiral"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv", "Paresh"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh"],
+          "points": 190,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-03T04:33:14.979Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 180,
+        "Pinkey": 0,
+        "Apurv": 0,
+        "Jesal": 0,
+        "Paresh": 180,
+        "Hiral": 0,
+        "Samir": 0,
+        "Mital": 0,
+        "Rajen": 360,
+        "Reena": 0
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Yogesh", "Paresh"],
+          "points": 180,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-03T03:59:50.618Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 710,
+        "Pinkey": 1500,
+        "Apurv": 475,
+        "Jesal": 1180,
+        "Paresh": 1935,
+        "Hiral": 1110,
+        "Samir": 1665,
+        "Mital": 1690,
+        "Rajen": 1505,
+        "Reena": 1215
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Paresh", "Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Reena", "Samir"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Jesal"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh", "Hiral"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Mital"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Rajen"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Pinkey", "Rajen"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Hiral"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Samir", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Apurv"],
+          "points": 200,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2024-11-02T23:36:28.649Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 360,
+        "Pinkey": 420,
+        "Apurv": 180,
+        "Jesal": 210,
+        "Paresh": 0,
+        "Hiral": 0,
+        "Karan": 0
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Jesal"],
+          "points": 210,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Karan"
+      ],
+      "date": "2024-10-14T01:53:13.139Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 430,
+        "Pinkey": 215,
+        "Apurv": 0,
+        "Jesal": 0,
+        "Paresh": 0,
+        "Hiral": 0,
+        "Kamlesh": 0,
+        "Meeta": 0
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 215,
+          "result": true
+        }
+      ],
+      "date": "2024-10-13T19:13:39.064Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 380,
+        "Pinkey": 800,
+        "Apurv": 520,
+        "Jesal": 520,
+        "Paresh": 370,
+        "Hiral": 370,
+        "Samir": 180,
+        "Mital": 350,
+        "Reena": 910,
+        "Karan": 370
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Karan", "Reena"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh", "Pinkey"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Pinkey", "Paresh"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Pinkey", "Mital"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Hiral"],
+          "points": 190,
+          "result": true
+        }
+      ],
+      "date": "2024-10-13T04:14:43.944Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 685,
+        "Pinkey": 595,
+        "Apurv": 810,
+        "Jesal": 460,
+        "Paresh": 180,
+        "Hiral": 810,
+        "Samir": 1385,
+        "Mital": 450,
+        "Reena": 460
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Paresh"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Mital"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Hiral"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Hiral", "Samir"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Pinkey"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Pinkey"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "date": "2024-10-13T01:07:09.669Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1320,
+        "Pinkey": 645,
+        "Paresh": 650,
+        "Hiral": 465,
+        "Samir": 1125,
+        "Mital": 990,
+        "Rajen": 1680,
+        "Reena": 850
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Pinkey"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Reena", "Paresh"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Mital"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Mital"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Rajen"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Yogesh", "Reena"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 270,
+          "result": true
+        }
+      ],
+      "date": "2024-09-29T04:03:08.311Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1455,
+        "Pinkey": 445,
+        "Jesal": 220,
+        "Apurv": 575,
+        "Paresh": 1250,
+        "Hiral": 185,
+        "Samir": 1275,
+        "Mital": 785,
+        "Rajen": 1405,
+        "Reena": 775
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Apurv"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Samir", "Rajen"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal", "Mital"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Paresh", "Mital"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Paresh"],
+          "points": 270,
+          "result": true
+        }
+      ],
+      "date": "2024-09-29T02:48:54.367Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1015,
+        "Pinkey": 670,
+        "Karan": 695,
+        "Dhru": 515,
+        "Dada": 835
+      },
+      "rounds": [
+        {
+          "leader": "Dada",
+          "teammates": ["Karan"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Dhru",
+          "teammates": ["Dada"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Karan"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Dhru",
+          "teammates": ["Pinkey"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Karan"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Dhru"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Karan"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 150,
+          "result": true
+        }
+      ],
+      "date": "2024-09-23T02:02:15.697Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 50,
+        "Pinkey": 500,
+        "Apurv": 500,
+        "Jesal": 350,
+        "Paresh": 100,
+        "Hiral": 500,
+        "Samir": 0,
+        "Mital": 350,
+        "Rajen": 500,
+        "Reena": 150
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir", "Reena"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Jesal"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 150,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-09-14T01:38:00.006Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 370,
+        "Pinkey": 1170,
+        "Apurv": 390,
+        "Jesal": 1355,
+        "Paresh": 950,
+        "Hiral": 590,
+        "Samir": 385,
+        "Mital": 975
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv", "Yogesh"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Hiral"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Samir", "Jesal"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Hiral", "Paresh"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Jesal"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Paresh"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Hiral"],
+          "points": 190,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital"
+      ],
+      "date": "2025-09-14T03:38:46.920Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 250,
+        "Pinkey": 1420,
+        "Apurv": 1595,
+        "Jesal": 340,
+        "Paresh": 1580,
+        "Hiral": 1170,
+        "Samir": 615,
+        "Mital": 1205,
+        "Rajen": 360,
+        "Reena": 995
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Mital"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Paresh", "Yogesh", "Mital"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Rajen", "Reena"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Hiral", "Reena", "Apurv"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh", "Reena", "Apurv"],
+          "points": 225,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Rajen", "Pinkey", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Jesal", "Pinkey", "Samir"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Samir", "Yogesh"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Pinkey"],
+          "points": 150,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-09-21T03:26:40.810Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1125,
+        "Pinkey": 550,
+        "Apurv": 1310,
+        "Jesal": 540,
+        "Paresh": 1270,
+        "Hiral": 15,
+        "Samir": 695,
+        "Mital": 405,
+        "Reena": 345
+      },
+      "rounds": [
+        {
+          "leader": "Jesal",
+          "teammates": ["Hiral", "Reena"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Pinkey", "Apurv"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Jesal", "Mital"],
+          "points": 170,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Yogesh", "Apurv"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Reena"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Apurv", "Jesal"],
+          "points": 160,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Jesal"],
+          "points": 185,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Reena"
+      ],
+      "date": "2025-09-28T03:27:34.590Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 870,
+        "Pinkey": 620,
+        "Apurv": 350,
+        "Jesal": 350,
+        "Paresh": 985,
+        "Hiral": 765,
+        "Samir": 560,
+        "Mital": 965,
+        "Rajen": 950,
+        "Reena": 410
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Mital", "Hiral", "Paresh"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Hiral", "Jesal"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Reena", "Samir", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Apurv", "Rajen"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Pinkey", "Mital"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Samir", "Hiral"],
+          "points": 210,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-10-19T02:24:53.750Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 365,
+        "Pinkey": 785,
+        "Paresh": 605,
+        "Hiral": 540,
+        "Samir": 785,
+        "Mital": 1285
+      },
+      "rounds": [
+        {
+          "leader": "Hiral",
+          "teammates": ["Mital"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Mital"],
+          "points": 165,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh"],
+          "points": 150,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Yogesh"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral"],
+          "points": 150,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Mital"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital"],
+          "points": 155,
+          "result": false
+        }
+      ],
+      "players": ["Yogesh", "Pinkey", "Paresh", "Hiral", "Samir", "Mital"],
+      "date": "2025-10-19T03:39:47.895Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 535,
+        "Pinkey": 180,
+        "Apurv": 180,
+        "Paresh": 380,
+        "Hiral": 190,
+        "Samir": 380,
+        "Mital": 365,
+        "Rajen": 730,
+        "Reena": 380
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Mital", "Apurv"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Apurv"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Apurv"],
+          "points": 190,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-10-26T02:15:38.767Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 2025,
+        "Pinkey": 685,
+        "Apurv": 2010,
+        "Hiral": 1250,
+        "Samir": 1690,
+        "Mital": 1295,
+        "Rajen": 1030,
+        "Reena": 720
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Rajen"],
+          "points": 180,
+          "result": false
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Apurv", "Pinkey"],
+          "points": 150,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Apurv"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Yogesh", "Rajen"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Mital"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Apurv", "Reena"],
+          "points": 155,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Reena",
+          "teammates": ["Rajen", "Pinkey"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Samir"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Yogesh"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Apurv", "Hiral"],
+          "points": 195,
+          "result": true
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Rajen", "Mital"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Hiral"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Yogesh"],
+          "points": 195,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-11-09T02:37:56.552Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 430,
+        "Pinkey": -195,
+        "Apurv": 175,
+        "Jesal": 370,
+        "Paresh": 205,
+        "Hiral": 370,
+        "Rajen": 370,
+        "Reena": 575
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Paresh"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Apurv", "Paresh"],
+          "points": 195,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Paresh", "Reena"],
+          "points": 205,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-11-09T03:10:51.774Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 620,
+        "Pinkey": 985,
+        "Apurv": 205,
+        "Jesal": 405,
+        "Paresh": 195,
+        "Hiral": 605,
+        "Samir": 415,
+        "Mital": 0,
+        "Rajen": 545,
+        "Reena": 205
+      },
+      "rounds": [
+        {
+          "leader": "Pinkey",
+          "teammates": ["Yogesh", "Hiral"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 205,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Pinkey", "Samir"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Pinkey"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Jesal", "Hiral"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-11-16T01:40:28.069Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 530,
+        "Pinkey": 215,
+        "Apurv": 695,
+        "Jesal": 1075,
+        "Hiral": -5,
+        "Samir": 850,
+        "Mital": 860,
+        "Rajen": 60,
+        "Reena": 695
+      },
+      "rounds": [
+        {
+          "leader": "Rajen",
+          "teammates": ["Mital", "Pinkey"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Mital", "Yogesh"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Rajen", "Samir"],
+          "points": 215,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 270,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-11-16T02:47:44.689Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 575,
+        "Pinkey": 470,
+        "Apurv": 715,
+        "Jesal": 645,
+        "Hiral": -175,
+        "Samir": 340,
+        "Mital": 165,
+        "Haley": 505
+      },
+      "rounds": [
+        {
+          "leader": "Hiral",
+          "teammates": ["Pinkey", "Mital"],
+          "points": 175,
+          "result": false
+        },
+        {
+          "leader": "Apurv",
+          "teammates": ["Pinkey", "Jesal"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Haley",
+          "teammates": ["Samir", "Mital"],
+          "points": 165,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Pinkey"],
+          "points": 200,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Haley"
+      ],
+      "date": "2025-11-23T02:22:28.514Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1685,
+        "Pinkey": 380,
+        "Jesal": 935,
+        "Samir": 1295,
+        "Mital": 740,
+        "Rajen": 1480,
+        "Reena": 1305
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Jesal"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Samir", "Mital"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Mital"],
+          "points": 185,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Reena", "Rajen"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Rajen", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Reena"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Jesal", "Reena"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Yogesh", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Pinkey",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 175,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Jesal",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-11-23T22:02:45.943Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1315,
+        "Pinkey": 350,
+        "Jesal": 1020,
+        "Paresh": 1300,
+        "Hiral": 920,
+        "Samir": 1190,
+        "Mital": 905,
+        "Rajen": 1100,
+        "Reena": 945
+      },
+      "rounds": [
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Rajen"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Mital", "Yogesh"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Hiral", "Reena"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Reena", "Rajen"],
+          "points": 185,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Rajen", "Yogesh"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena", "Rajen"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Reena", "Paresh"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Rajen",
+          "teammates": ["Hiral", "Jesal"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Rajen", "Samir"],
+          "points": 190,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Hiral", "Samir"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral"],
+          "points": 205,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-11-30T04:12:20.437Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1030,
+        "Pinkey": 1060,
+        "Apurv": 1025,
+        "Jesal": 1635,
+        "Paresh": 420,
+        "Hiral": 1025,
+        "Samir": 1645,
+        "Mital": 260,
+        "Rajen": 1035,
+        "Reena": 1235
+      },
+      "rounds": [
+        {
+          "leader": "Paresh",
+          "teammates": ["Reena", "Yogesh"],
+          "points": 210,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Yogesh", "Mital", "Reena"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Rajen", "Hiral", "Pinkey"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Jesal", "Pinkey", "Reena"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Apurv", "Rajen", "Pinkey"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Pinkey", "Apurv"],
+          "points": 215,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Paresh", "Pinkey"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Rajen", "Jesal", "Reena"],
+          "points": 200,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Samir", "Jesal", "Hiral"],
+          "points": 215,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Pinkey", "Rajen", "Reena"],
+          "points": 225,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-12-07T04:15:47.211Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1345,
+        "Pinkey": 620,
+        "Apurv": 430,
+        "Jesal": 790,
+        "Paresh": 840,
+        "Hiral": 450,
+        "Samir": 1330,
+        "Mital": 585
+      },
+      "rounds": [
+        {
+          "leader": "Mital",
+          "teammates": ["Paresh", "Jesal"],
+          "points": 160,
+          "result": false
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Hiral", "Pinkey"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Paresh", "Mital"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Yogesh", "Samir"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Hiral",
+          "teammates": ["Mital"],
+          "points": 270,
+          "result": false
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Jesal"],
+          "points": 170,
+          "result": true
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Yogesh", "Hiral"],
+          "points": 175,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Hiral"],
+          "points": 195,
+          "result": true
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital"
+      ],
+      "date": "2025-12-21T02:04:09.050Z"
+    },
+    {
+      "scores": {
+        "Yogesh": 1165,
+        "Pinkey": 595,
+        "Apurv": 595,
+        "Jesal": 1055,
+        "Paresh": 590,
+        "Hiral": 405,
+        "Samir": 1335,
+        "Mital": -25,
+        "Rajen": 785,
+        "Reena": 1670
+      },
+      "rounds": [
+        {
+          "leader": "Reena",
+          "teammates": ["Samir", "Yogesh"],
+          "points": 210,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Samir", "Mital"],
+          "points": 200,
+          "result": false
+        },
+        {
+          "leader": "Jesal",
+          "teammates": ["Rajen", "Apurv"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Pinkey", "Reena"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Yogesh",
+          "teammates": ["Mital", "Reena"],
+          "points": 180,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Yogesh", "Rajen"],
+          "points": 190,
+          "result": true
+        },
+        {
+          "leader": "Paresh",
+          "teammates": ["Apurv", "Reena"],
+          "points": 205,
+          "result": true
+        },
+        {
+          "leader": "Samir",
+          "teammates": ["Reena", "Jesal"],
+          "points": 270,
+          "result": true
+        },
+        {
+          "leader": "Mital",
+          "teammates": ["Apurv", "Paresh"],
+          "points": 205,
+          "result": false
+        }
+      ],
+      "players": [
+        "Yogesh",
+        "Pinkey",
+        "Apurv",
+        "Jesal",
+        "Paresh",
+        "Hiral",
+        "Samir",
+        "Mital",
+        "Rajen",
+        "Reena"
+      ],
+      "date": "2025-12-25T19:30:49.410Z"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "kali-teeri-wrapped",
+  "version": "1.0.0",
+  "description": "Kali Teeri Wrapped 2025 - Spotify Wrapped style web app",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -a 0.0.0.0 -o",
+    "dev": "npx http-server -p 8000 -a localhost -o",
+    "serve": "npx http-server -p 8000 -a 0.0.0.0"
+  },
+  "keywords": [
+    "kali-teeri",
+    "wrapped",
+    "stats",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
