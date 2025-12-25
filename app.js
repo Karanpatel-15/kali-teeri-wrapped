@@ -79,9 +79,7 @@ class WrappedRenderer {
 
       const isFirstPage = page === 0;
       pagesHTML += `
-        <div class="items-page ${
-          isFirstPage ? "active" : ""
-        }" data-page="${page}">
+        <div class="items-page ${isFirstPage ? "active" : ""}" data-page="${page}" style="${isFirstPage ? "display: flex;" : "display: none;"}">
           ${pageItemsHTML}
         </div>
       `;
@@ -311,10 +309,12 @@ class WrappedRenderer {
 
       // After fade-out, switch pages
       setTimeout(() => {
-        // Hide current page
-        currentPageContainer.classList.remove("fade-out");
+        // Hide current page completely (display: none)
+        currentPageContainer.style.display = "none";
+        currentPageContainer.classList.remove("fade-out", "active");
 
         // Show and fade in next page
+        nextPageContainer.style.display = "flex";
         nextPageContainer.classList.add("active", "fade-in");
 
         // Update card state
@@ -322,6 +322,11 @@ class WrappedRenderer {
 
         // Update buttons and indicator
         this.updatePaginationControls(card, newPage, totalPages);
+
+        // Force Swiper to recalculate slide height
+        if (this.swiper) {
+          this.swiper.update();
+        }
       }, 300); // Match CSS transition duration
     });
   }
