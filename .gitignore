@@ -4,4 +4,8 @@ node_modules/
 .env
 .idea/
 .vscode/
+
+# GitHub Pages
+# Remove CNAME if you're not using a custom domain
+# CNAME
 ignore/

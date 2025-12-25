@@ -121,7 +121,61 @@ Press `Ctrl + C` in the terminal where the server is running.
 
 ## Deployment to GitHub Pages
 
-1. Push all files to a GitHub repository
-2. Go to repository Settings → Pages
-3. Select source branch (usually `main`)
-4. Your app will be live at: `https://YOUR_USERNAME.github.io/REPO_NAME`
+### Quick Setup:
+
+1. **Create a GitHub repository** (or use an existing one)
+
+2. **Push your files to GitHub:**
+
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   git push -u origin main
+   ```
+
+3. **Enable GitHub Pages:**
+
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages**
+   - Under **Source**, select **Deploy from a branch**
+   - Choose branch: `main` (or `master`)
+   - Choose folder: `/ (root)`
+   - **IMPORTANT:** Scroll down to "Custom domain" section and **leave it blank** (clear any text if present)
+   - Click **Save**
+
+4. **Your app will be live at:**
+   - `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+   - Example: `https://johndoe.github.io/kali-teeri-wrapped/`
+
+### Fix Custom Domain Error:
+
+**If you see:** "The custom domain `kali-teeri-wrapped` is not properly formatted"
+
+**Solution:**
+
+1. Go to repository **Settings** → **Pages**
+2. Scroll to **Custom domain** section
+3. **Delete/clear any text** in the custom domain field (leave it completely blank)
+4. Click **Save**
+
+The GitHub Pages URL (`.github.io`) works perfectly - you don't need a custom domain!
+
+### Important Notes:
+
+- **No custom domain needed** - The GitHub Pages URL works perfectly
+- **Repository name ≠ Custom domain** - Don't enter your repo name in the custom domain field
+- **No build step required** - Since this is a static site, GitHub Pages will serve it directly
+- **HTTPS is automatic** - GitHub Pages provides free SSL certificates
+
+### File Structure:
+
+Make sure these files are in the root of your repository:
+
+- `index.html` ✅
+- `style.css` ✅
+- `app.js` ✅
+- `wrapped_data.js` ✅
+- `.nojekyll` ✅ (included to prevent Jekyll processing)
