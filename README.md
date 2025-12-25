@@ -71,6 +71,57 @@ npx http-server -p 8000 -a 0.0.0.0
 
 Starts the server without opening a browser automatically.
 
+## Generating Statistics
+
+The statistics are calculated from `data.json` using a Python script. **Stats are calculated once** - you need to run the script manually whenever you want to update the statistics.
+
+### Prerequisites
+
+- Python 3 (usually pre-installed on Mac/Linux)
+- Your game data in `data.json`
+
+### Running the Statistics Script
+
+```bash
+python3 data.py
+```
+
+or
+
+```bash
+python data.py
+```
+
+This will:
+1. Read game data from `data.json`
+2. Calculate all statistics for frequent players
+3. Print the results to the console
+
+### Updating the Web App
+
+After running `data.py`, you'll see the statistics printed in the terminal. You need to manually copy the relevant statistics into `wrapped_data.js` to update the web app display.
+
+**Note:** The script calculates stats **once per run**. It doesn't automatically update the web app - you run it when you want fresh statistics, then update `wrapped_data.js` with the new data.
+
+### Available Statistics
+
+The script calculates:
+
+**Existing Stats:**
+- **The Boldest Bidders**: Average bid points when leading
+- **Leader Conversion Rate**: Win percentage when leading
+- **Clutch Leaders**: Wins with bids ≥220 points
+- **The Most Wanted**: How often each player is called as a teammate
+- **The Kingmakers**: Win percentage when playing as teammate
+- **The Over-Sellers**: Failed bids (losses when leading)
+- **Favorite Partnerships**: Most common leader-teammate combinations
+- **Unstoppable Trios**: Best 3-player winning combinations
+
+**New Stats (Added):**
+- **The Champions**: Overall win rate (wins as leader OR teammate / total rounds)
+- **The Traitors**: Average points lost when playing as teammate
+- **Nemesis Tracking**: Worst partnerships (combinations with most losses)
+
 ## Features
 
 - 📊 **Interactive Stats**: View game statistics in a beautiful wrapped format
@@ -87,7 +138,9 @@ Kali-Teeri/
 ├── index.html          # Main HTML file
 ├── style.css          # Styles and animations
 ├── app.js             # Application logic
-├── wrapped_data.js    # Game statistics data
+├── wrapped_data.js    # Game statistics data (manually updated)
+├── data.py            # Python script to calculate statistics
+├── data.json          # Raw game data (input for data.py)
 └── README.md         # This file
 ```
 

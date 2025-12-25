@@ -79,7 +79,11 @@ class WrappedRenderer {
 
       const isFirstPage = page === 0;
       pagesHTML += `
-        <div class="items-page ${isFirstPage ? "active" : ""}" data-page="${page}" style="${isFirstPage ? "display: flex;" : "display: none;"}">
+        <div class="items-page ${
+          isFirstPage ? "active" : ""
+        }" data-page="${page}" style="${
+        isFirstPage ? "display: flex;" : "display: none;"
+      }">
           ${pageItemsHTML}
         </div>
       `;
@@ -146,11 +150,38 @@ class WrappedRenderer {
 
   // Render big highlight card template
   renderBigHighlightCard(card) {
+    // Check if extraPlayers exists for podium layout
+    const hasExtraPlayers = card.extraPlayers && card.extraPlayers.length > 0;
+
+    let extraPlayersHTML = "";
+    if (hasExtraPlayers) {
+      extraPlayersHTML = `
+        <div class="podium-players">
+          ${card.extraPlayers
+            .map(
+              (player, index) => `
+            <div class="podium-player" data-rank="${index + 2}">
+              <div class="podium-rank">#${index + 2}</div>
+              <div class="podium-name">${this.escapeHtml(player.name)}</div>
+              <div class="podium-stat">${this.escapeHtml(
+                player.stat || player.value || ""
+              )}</div>
+            </div>
+          `
+            )
+            .join("")}
+        </div>
+      `;
+    }
+
     return `
-            <div class="card card-big-highlight">
+            <div class="card card-big-highlight ${
+              hasExtraPlayers ? "has-podium" : ""
+            }">
                 <div class="title">${this.escapeHtml(card.title)}</div>
                 <div class="name">${this.escapeHtml(card.name)}</div>
                 <div class="stat">${this.escapeHtml(card.stat)}</div>
+                ${extraPlayersHTML}
                 <div class="description">${this.escapeHtml(
                   card.description
                 )}</div>

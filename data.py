@@ -16,12 +16,25 @@ def generate_frequent_player_wrapped(data):
     clutch_wins = Counter()
     over_sellers = Counter()
     
-    # Leader -> Teammate mapping
+    # Leader -> Teammate mapping (for wins and losses)
     partnerships = defaultdict(Counter)
+    partnership_losses = defaultdict(Counter)
+    
+    # Overall win rate tracking
+    total_rounds = Counter()  # Total rounds participated (as leader or teammate)
+    total_wins = Counter()    # Total wins (as leader or teammate)
+    
+    # Traitor tracking (points lost as teammate)
+    tm_losses = Counter()     # Count of losses as teammate
+    tm_points_lost = Counter()  # Total points lost when teammate (sum of bid points on losses)
+    
+    # Games played tracking (unique games per player)
+    games_played = defaultdict(set)  # Track unique games each player participated in
+    
     # Trio tracking
     trios = Counter()
 
-    for game in data.get('pastGames', []):
+    for game_idx, game in enumerate(data.get('pastGames', [])):
         for rd in game.get('rounds', []):
             l = rd['leader']
             tms = rd['teammates']
@@ -35,9 +48,12 @@ def generate_frequent_player_wrapped(data):
             if is_frequent_leader:
                 leads_count[l] += 1
                 leads_points[l].append(pts)
+                total_rounds[l] += 1
+                games_played[l].add(game_idx)  # Track this game for the leader
                 if won:
                     leads_wins[l] += 1
-                    if pts > 200:
+                    total_wins[l] += 1
+                    if pts >= 220:  # Changed to >=220 for "The Clutch" Factor
                         clutch_wins[l] += 1
                 else:
                     over_sellers[l] += 1
@@ -46,10 +62,18 @@ def generate_frequent_player_wrapped(data):
             for tm in tms:
                 if tm in frequent_players:
                     tm_count[tm] += 1
+                    total_rounds[tm] += 1
+                    games_played[tm].add(game_idx)  # Track this game for the teammate
                     if is_frequent_leader:
                         partnerships[l][tm] += 1
+                        if not won:
+                            partnership_losses[l][tm] += 1
                     if won:
                         tm_wins[tm] += 1
+                        total_wins[tm] += 1
+                    else:
+                        tm_losses[tm] += 1
+                        tm_points_lost[tm] += pts  # Track points lost when teammate loses
             
             # Unstoppable Trio (Only if all 3 are frequent players)
             if len(tms) == 2 and won:
@@ -66,6 +90,34 @@ def generate_frequent_player_wrapped(data):
         l_win_rate = (leads_wins[p] / leads_count[p] * 100) if leads_count[p] > 0 else 0
         tm_win_rate = (tm_wins[p] / tm_count[p] * 100) if tm_count[p] > 0 else 0
         fav_ally = partnerships[p].most_common(1)[0][0] if partnerships[p] else "None"
+        
+        # Overall Win Rate (Champion Stat)
+        overall_win_rate = (total_wins[p] / total_rounds[p] * 100) if total_rounds[p] > 0 else 0
+        
+        # The Traitor (Net Point Loss as Teammate)
+        avg_points_lost = (tm_points_lost[p] / tm_losses[p]) if tm_losses[p] > 0 else 0
+        
+        # Find nemesis (partnership with most losses)
+        # Check both directions: when p is leader, and when p is teammate
+        nemesis_losses = Counter()
+        # When p is leader, track which teammates they lose with
+        if partnership_losses[p]:
+            for tm, loss_count in partnership_losses[p].items():
+                nemesis_losses[tm] += loss_count
+        # When p is teammate, track which leaders they lose with
+        for leader in frequent_players:
+            if p in partnership_losses[leader]:
+                loss_count = partnership_losses[leader][p]
+                nemesis_losses[leader] += loss_count
+        
+        nemesis = None
+        if nemesis_losses:
+            nemesis_player, nemesis_count = nemesis_losses.most_common(1)[0]
+            if nemesis_count > 0:
+                nemesis = nemesis_player
+
+        # Count unique games played
+        games_count = len(games_played[p])
 
         final_results.append({
             "name": p,
@@ -75,7 +127,11 @@ def generate_frequent_player_wrapped(data):
             "called": tm_count[p],
             "tm_win_rate": round(tm_win_rate, 1),
             "over_sells": over_sellers[p],
-            "fav_ally": fav_ally
+            "fav_ally": fav_ally,
+            "overall_win_rate": round(overall_win_rate, 1),
+            "avg_points_lost": round(avg_points_lost, 1),
+            "nemesis": nemesis,
+            "games_played": games_count
         })
 
     # --- PRINTING THE RECAP ---
@@ -90,14 +146,45 @@ def generate_frequent_player_wrapped(data):
 
     print_leaderboard("THE BOLD BIDDERS", "avg_bid", " pts")
     print_leaderboard("LEADER CONVERSION RATE", "l_win_rate", "%")
-    print_leaderboard("CLUTCH LEADERS (>200 Wins)", "clutch")
-    print_leaderboard("THE MOST WANTED (Times Called)", "called")
+    print_leaderboard("CLUTCH LEADERS (≥220 Wins)", "clutch")
+    print_leaderboard("MOST CALLED", "called")
     print_leaderboard("THE KINGMAKERS (Teammate Win %)", "tm_win_rate", "%")
     print_leaderboard("THE OVER-SELLERS (Lead Losses)", "over_sells")
+    
+    # NEW STATISTICS
+    print_leaderboard("MOST GAMES PLAYED", "games_played", " games")
+    print_leaderboard("THE CHAMPIONS (Overall Win Rate)", "overall_win_rate", "%")
+    print_leaderboard("THE TRAITORS (Avg Points Lost as Teammate)", "avg_points_lost", " pts", reverse=False)
     
     print("--- FAVORITE ALLIES ---")
     for r in final_results:
         print(f"{r['name']} ➔ {r['fav_ally']}")
+    
+    print("\n--- NEMESIS TRACKING (Worst Partnerships) ---")
+    # Build a comprehensive list of all losing partnerships
+    all_nemesis_pairs = []
+    for leader in frequent_players:
+        for teammate, loss_count in partnership_losses[leader].items():
+            if teammate in frequent_players and loss_count > 0:
+                all_nemesis_pairs.append({
+                    "pair": f"{leader} + {teammate}",
+                    "losses": loss_count
+                })
+    if all_nemesis_pairs:
+        all_nemesis_pairs.sort(key=lambda x: x['losses'], reverse=True)
+        for item in all_nemesis_pairs[:10]:  # Top 10 worst partnerships
+            print(f"{item['pair']}: {item['losses']} losses")
+    else:
+        print("No nemesis partnerships recorded yet.")
+    
+    print("\n--- INDIVIDUAL NEMESIS (Each Player's Worst Partner) ---")
+    for r in final_results:
+        if r['nemesis'] and r['nemesis'] in frequent_players:
+            # Calculate total losses with nemesis (both directions)
+            losses_as_leader = partnership_losses[r['name']][r['nemesis']]
+            losses_as_teammate = partnership_losses[r['nemesis']][r['name']] if r['nemesis'] in partnership_losses else 0
+            total_losses = losses_as_leader + losses_as_teammate
+            print(f"{r['name']} ↔ {r['nemesis']}: {total_losses} losses")
 
     print("\n--- UNSTOPPABLE TRIOS ---")
     if trios:
