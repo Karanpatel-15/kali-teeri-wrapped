@@ -198,17 +198,17 @@ body {
     position: relative;
     margin-top: 2rem;
     overflow: hidden;
-    min-height: 450px; /* Ensure 5 items plus padding fit comfortably */
+    min-height: 550px; /* Ensure 5 items plus padding fit comfortably */
 }
 
 .ranked-items-viewport {
-    height: 450px; /* Fixed height for exactly 5 ranked items */
-    min-height: 450px;
+    height: 550px; /* Fixed height for exactly 5 ranked items */
+    min-height: 550px;
 }
 
 .comparison-items-viewport {
-    height: 450px; /* Fixed height for exactly 5 comparison items */
-    min-height: 450px;
+    height: 550px; /* Fixed height for exactly 5 comparison items */
+    min-height: 550px;
 }
 
 /* Unified Page Container - Absolute positioning so pages overlap */
@@ -614,17 +614,17 @@ body {
     }
 
     .ranked-items-viewport {
-        height: 420px;
-        min-height: 420px;
+        height: 520px;
+        min-height: 520px;
     }
     
     .comparison-items-viewport {
-        height: 420px;
-        min-height: 420px;
+        height: 520px;
+        min-height: 520px;
     }
     
     .items-viewport {
-        min-height: 420px;
+        min-height: 520px;
     }
 
     .ranked-item {

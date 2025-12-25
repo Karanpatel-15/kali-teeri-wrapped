@@ -28,10 +28,13 @@ def generate_frequent_player_wrapped(data):
     tm_losses = Counter()     # Count of losses as teammate
     tm_points_lost = Counter()  # Total points lost when teammate (sum of bid points on losses)
     
+    # Games played tracking (unique games per player)
+    games_played = defaultdict(set)  # Track unique games each player participated in
+    
     # Trio tracking
     trios = Counter()
 
-    for game in data.get('pastGames', []):
+    for game_idx, game in enumerate(data.get('pastGames', [])):
         for rd in game.get('rounds', []):
             l = rd['leader']
             tms = rd['teammates']
@@ -46,6 +49,7 @@ def generate_frequent_player_wrapped(data):
                 leads_count[l] += 1
                 leads_points[l].append(pts)
                 total_rounds[l] += 1
+                games_played[l].add(game_idx)  # Track this game for the leader
                 if won:
                     leads_wins[l] += 1
                     total_wins[l] += 1
@@ -59,6 +63,7 @@ def generate_frequent_player_wrapped(data):
                 if tm in frequent_players:
                     tm_count[tm] += 1
                     total_rounds[tm] += 1
+                    games_played[tm].add(game_idx)  # Track this game for the teammate
                     if is_frequent_leader:
                         partnerships[l][tm] += 1
                         if not won:
@@ -111,6 +116,9 @@ def generate_frequent_player_wrapped(data):
             if nemesis_count > 0:
                 nemesis = nemesis_player
 
+        # Count unique games played
+        games_count = len(games_played[p])
+
         final_results.append({
             "name": p,
             "avg_bid": round(avg_bid, 1),
@@ -122,7 +130,8 @@ def generate_frequent_player_wrapped(data):
             "fav_ally": fav_ally,
             "overall_win_rate": round(overall_win_rate, 1),
             "avg_points_lost": round(avg_points_lost, 1),
-            "nemesis": nemesis
+            "nemesis": nemesis,
+            "games_played": games_count
         })
 
     # --- PRINTING THE RECAP ---
@@ -138,11 +147,12 @@ def generate_frequent_player_wrapped(data):
     print_leaderboard("THE BOLD BIDDERS", "avg_bid", " pts")
     print_leaderboard("LEADER CONVERSION RATE", "l_win_rate", "%")
     print_leaderboard("CLUTCH LEADERS (≥220 Wins)", "clutch")
-    print_leaderboard("THE MOST WANTED (Times Called)", "called")
+    print_leaderboard("MOST CALLED", "called")
     print_leaderboard("THE KINGMAKERS (Teammate Win %)", "tm_win_rate", "%")
     print_leaderboard("THE OVER-SELLERS (Lead Losses)", "over_sells")
     
     # NEW STATISTICS
+    print_leaderboard("MOST GAMES PLAYED", "games_played", " games")
     print_leaderboard("THE CHAMPIONS (Overall Win Rate)", "overall_win_rate", "%")
     print_leaderboard("THE TRAITORS (Avg Points Lost as Teammate)", "avg_points_lost", " pts", reverse=False)
     
