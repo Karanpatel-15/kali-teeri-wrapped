@@ -188,9 +188,19 @@ body {
 .swiper-slide-active .card-ranked-list .title {
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 900;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+.swiper-slide-active .card-ranked-list .description {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    font-weight: 400;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+    animation: fadeInScale 0.6s ease-out 0.4s both;
 }
 
 /* Unified Items Viewport - Fixed Height Container */
@@ -198,7 +208,7 @@ body {
     position: relative;
     margin-top: 2rem;
     overflow: hidden;
-    min-height: 550px; /* Ensure 5 items plus padding fit comfortably */
+    min-height: 450px; /* Ensure 5 items plus padding fit comfortably */
 }
 
 .ranked-items-viewport {
@@ -728,17 +738,26 @@ body {
     }
 
     .ranked-items-viewport {
-        height: 520px;
-        min-height: 520px;
+        height: 320px;
+        min-height: 320px;
+        max-height: 320px;
     }
     
     .comparison-items-viewport {
-        height: 520px;
-        min-height: 520px;
+        height: 320px;
+        min-height: 320px;
+        max-height: 320px;
     }
     
     .items-viewport {
-        min-height: 520px;
+        min-height: 320px;
+        max-height: 320px;
+    }
+    
+    /* Description styling on mobile */
+    .swiper-slide-active .card-ranked-list .description {
+        margin-bottom: 1rem;
+        font-size: clamp(0.85rem, 2vw, 1rem);
     }
 
     .ranked-item {

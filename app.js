@@ -137,9 +137,14 @@ class WrappedRenderer {
       totalPages
     );
 
+    const descriptionHTML = card.description
+      ? `<div class="description">${this.escapeHtml(card.description)}</div>`
+      : "";
+
     return `
       <div class="card card-ranked-list" data-card-id="${cardId}" data-current-page="0" data-total-pages="${totalPages}">
         <div class="title">${this.escapeHtml(card.title)}</div>
+        ${descriptionHTML}
         <div class="items-viewport ranked-items-viewport">
           ${pagesHTML}
         </div>
